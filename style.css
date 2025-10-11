@@ -290,65 +290,126 @@ p {
   margin-bottom: 0;
 }
 
-.about-cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 16px 32px;
-  background: linear-gradient(135deg, #c9a961 0%, #b8944d 100%);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  border-radius: 50px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
-  position: relative;
-  overflow: hidden;
+
+
+.services-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px; /* Adds space between cards */
+            justify-content: center;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            color: #141212;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 35px 25px;
+            gap: 15px;          
+            transition: all 0.4s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            flex: 1 1 300px;
+            min-width: 280px;
+            max-width: 350px;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            border-color: #667eea;
+            background: #fff;
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            transition: all 0.4s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .service-icon i {
+            font-size: 32px;
+            color: #fff;
+        }
+        
+        .service-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+        
+        .service-card p {
+            font-size: 0.95rem;
+            color: #718096;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        
+        .service-arrow {
+            margin-top: 15px;
+            color: #667eea;
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-arrow {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+
+
+
+.why-choose {
+position: relative;
+overflow: hidden;
 }
-
-.about-cta-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #b8944d 0%, #a67c3a 100%);
-  transition: left 0.4s ease;
-  z-index: 0;
-}
-
-.about-cta-btn:hover::before {
-  left: 0;
-}
-
-.about-cta-btn span,
-.about-cta-btn i {
-  position: relative;
-  z-index: 1;
-}
-
-.about-cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(201, 169, 97, 0.4);
-  color: #fff;
-}
-
-.about-cta-btn i {
-  transition: transform 0.3s ease;
-  font-size: 0.9rem;
-}
-
-.about-cta-btn:hover i {
-  transform: translateX(5px);
-}
-
-
-
-
-
-
+.why-choose h2 span {
+    border-bottom: 3px solid #0d6efd;
+    padding-bottom: 4px;
+  }
+  .why-choose .icon {
+    transition: all 0.3s ease;
+  }
+  .why-choose .icon:hover {
+    background-color: #0d6efd;
+    color: #fff;
+    transform: translateY(-3px);
+  }
 
 
 
