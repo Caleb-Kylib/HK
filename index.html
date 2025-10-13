@@ -460,6 +460,80 @@
   </div>
 </section>
 
+<!--cta -->
+
+<section class="cta-section py-5 fade-in-section">
+  <div class="container text-center">
+    <h2 class="mb-3">Need Expert Legal Advice?</h2>
+    <p class="mb-4">
+      Our experienced team is ready to guide you through your legal matters with clarity and professionalism.
+    </p>
+    <a href="#contact" class="btn cta-btn btn-lg">Book a Free Consultation</a>
+  </div>
+</section>
+
+<section class="articles-section py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Our Articles & Insights</h2>
+
+    <div class="row g-4">
+      <!-- Article 1 -->
+      <div class="col-md-4">
+        <div class="card article-card h-100 border-0 shadow-sm">
+          <img
+            src="https://images.unsplash.com/photo-1590642911620-607b6b5d7c92?auto=format&fit=crop&w=900&q=80"
+            class="card-img-top"
+            alt="Legal article image"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Understanding Contract Law Basics</h5>
+            <p class="card-text">
+              A brief look at what makes a contract legally binding and how to protect your interests in agreements.
+            </p>
+            <a href="#" class="btn article-btn">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="col-md-4">
+        <div class="card article-card h-100 border-0 shadow-sm">
+          <img
+            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80"
+            class="card-img-top"
+            alt="Legal rights article"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Your Rights During Employment Termination</h5>
+            <p class="card-text">
+              Discover your legal protections and remedies when facing job dismissal or unfair treatment at work.
+            </p>
+            <a href="#" class="btn article-btn">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 3 -->
+      <div class="col-md-4">
+        <div class="card article-card h-100 border-0 shadow-sm">
+          <img
+            src="https://images.unsplash.com/photo-1555375771-14b2a63968e3?auto=format&fit=crop&w=900&q=80"
+            class="card-img-top"
+            alt="Property law article"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Navigating Property Ownership Laws</h5>
+            <p class="card-text">
+              Learn about property rights, titles, and what to consider before buying or leasing land in Kenya.
+            </p>
+            <a href="#" class="btn article-btn">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     </main>
 
@@ -530,6 +604,26 @@
       speed: 800,
     });
    </script>
+   
+   <!-- JS for Scroll Animation -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const fadeSections = document.querySelectorAll(".fade-in-section");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    fadeSections.forEach((section) => observer.observe(section));
+  });
+</script>
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/1234567890?text=Hi%20Mara%20Tours!%20I'm%20interested%20in%20planning%20a%20trip." class="whatsapp-float" target="_blank">
