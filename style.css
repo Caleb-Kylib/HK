@@ -990,3 +990,188 @@ background-color: #32c91e;
     font-size: 2.5rem;
     color: #ffffff;
   }
+
+  /* Team Page Styles */
+.team-banner {
+  /* Two-layer background: gradient overlay + photo */
+  background-image: linear-gradient(135deg, rgba(102, 166, 255, 0.8), rgba(167, 139, 250, 0.8)), url('Assets/img/kids.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center; /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  text-align: center;
+  color: #fff;
+  padding: 4rem 0;
+}
+
+/* Make sure content sits above any decorative overlays */
+.team-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Optional subtle overlay if you want extra contrast */
+.team-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(102, 166, 255, 0.25), rgba(167, 139, 250, 0.25));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure headings and leads are above the overlay */
+.team-banner h1,
+.team-banner p {
+  position: relative;
+  z-index: 3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-banner {
+    min-height: 40vh;
+    padding: 3rem 1rem;
+  }
+  .team-banner .display-4 {
+    font-size: 2rem;
+  }
+  .team-banner .lead {
+    font-size: 1rem;
+  }
+}
+
+/* Utility modifier if you want to swap background images via classes */
+.team-banner--kids {
+  background-image: linear-gradient(135deg, rgba(102, 166, 255, 0.8), rgba(167, 139, 250, 0.8)), url('Assets/img/kids.jpg');
+}
+.team-banner--office {
+  background-image: linear-gradient(135deg, rgba(102, 166, 255, 0.8), rgba(167, 139, 250, 0.8)), url('Assets/img/pexels-august-de-richelieu-4427613.jpg');
+}
+
+/* Leadership Cards — restyled for a clean, elegant law-firm look */
+.leadership-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  height: 100%;
+  border: 1px solid rgba(20,55,90,0.06);
+  box-shadow: 0 6px 18px rgba(20,55,90,0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.leadership-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(20,55,90,0.12);
+  border-color: rgba(20,55,90,0.12);
+}
+
+.staff-card {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 0.5rem auto;
+  flex: 0 0 auto;
+}
+
+.staff-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #ffffff;
+  box-shadow: 0 8px 20px rgba(20,55,90,0.12);
+  display: block;
+}
+
+.leadership-card h4 {
+  font-size: 1.15rem;
+  color: #14375A; /* dark blue */
+  font-weight: 700;
+  margin: 0.25rem 0 0;
+}
+
+.leadership-card h6 {
+  font-size: 0.9rem;
+  color: #6c7a89;
+  margin: 0.15rem 0 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.leadership-card p {
+  color: #5a6c7d;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Supporting Staff — cards + animations (scroll-triggered) */
+.support-grid .support-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(20,55,90,0.04);
+  box-shadow: 0 8px 22px rgba(20,55,90,0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  opacity: 0;
+  transform: translateY(18px);
+  /* animation will be applied when JavaScript adds the .animate class */
+}
+
+/* staggered delays (applied when .animate triggers the animation) */
+.support-grid .col:nth-child(1) .support-card { animation-delay: 0.05s; }
+.support-grid .col:nth-child(2) .support-card { animation-delay: 0.12s; }
+.support-grid .col:nth-child(3) .support-card { animation-delay: 0.19s; }
+.support-grid .col:nth-child(4) .support-card { animation-delay: 0.26s; }
+.support-grid .col:nth-child(5) .support-card { animation-delay: 0.33s; }
+.support-grid .col:nth-child(6) .support-card { animation-delay: 0.40s; }
+
+/* animation class — added when element enters viewport */
+.support-grid .support-card.animate {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.support-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 50px rgba(20,55,90,0.12);
+  border-color: rgba(20,55,90,0.12);
+}
+
+.staff-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  background: linear-gradient(135deg, rgba(20,55,90,0.9), rgba(52,120,200,0.9));
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(20,55,90,0.12);
+}
+
+/* keyframes */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .staff-icon { width: 72px; height: 72px; font-size: 28px; }
+  .support-grid .col:nth-child(1) .support-card,
+  .support-grid .col:nth-child(2) .support-card,
+  .support-grid .col:nth-child(3) .support-card,
+  .support-grid .col:nth-child(4) .support-card,
+  .support-grid .col:nth-child(5) .support-card,
+  .support-grid .col:nth-child(6) .support-card { animation-delay: 0.05s; }
+}
