@@ -556,7 +556,7 @@ background-color: #32c91e;
 /* Call to Action Section */
 
 .cta-section {
-  background: linear-gradient(135deg, #0a1a33, #142b53);
+  background: #675cd3; /* keep neutral; section padding applied via classes */
   color: #fff;
   border-radius: 15px;
   padding: 60px 20px;
@@ -576,19 +576,50 @@ background-color: #32c91e;
 }
 
 .cta-btn {
-  background-color: #ffc107;
-  color: #0a1a33;
+  display: inline-block;
+  padding: 12px 28px;
   font-weight: 600;
-  padding: 0.75rem 2rem;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  text-decoration: none;
+  color: #14375A;
+  border: 2px solid #14375A;
+  background: transparent;
+  border-radius: 50px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.cta-btn:hover {
-  background-color: #e6b800;
-  color: #0a1a33;
+.cta-btn:hover, .cta-btn:focus {
+  background: #14375A;
+  color: #fff;
   transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(20,55,90,0.12);
+  outline: none;
+}
+
+.cta-btn:focus-visible {
+  outline: 3px solid rgba(20,55,90,0.15);
+  outline-offset: 4px;
+}
+
+/* Slightly lighter CTA background wrapper for contrast */
+.cta-section {
+  background: #a18de9; /* keep neutral; section padding applied via classes */
+}
+
+.team-cta{
+  background: #121213; /* keep neutral; section padding applied via classes */
+  color: #c05555;
+  border-radius: 15px;
+  padding: 60px 20px;
+  text-align: center;
+  margin: 60px 0;
+  box-shadow: 0 6px 20px rgba(10, 26, 51, 0.1);
+}
+
+
+@media (max-width: 576px) {
+  .cta-btn {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+  }
 }
 
 .fade-in-section {
@@ -1174,4 +1205,180 @@ background-color: #32c91e;
   .support-grid .col:nth-child(4) .support-card,
   .support-grid .col:nth-child(5) .support-card,
   .support-grid .col:nth-child(6) .support-card { animation-delay: 0.05s; }
+}
+
+/* Team page CTA styles */
+.team-cta {
+  background: #ffffff;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.team-cta .cta-title {
+  color: #14375A; /* firm dark blue */
+  font-size: 1.6rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-weight: 600;
+  color: #14375A;
+  border: 2px solid #14375A;
+  background: transparent;
+  border-radius: 50px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.cta-btn:hover, .cta-btn:focus {
+  background: #14375A;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(20,55,90,0.12);
+  outline: none;
+}
+.cta-btn:focus-visible {
+  outline: 3px solid rgba(20,55,90,0.15);
+  outline-offset: 4px;
+}
+
+/* Team-page specific CTA styling (baby blue band) */
+.team-cta {
+  background: #E6F4FF; /* baby blue */
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+/* Ensure the CTA title contrasts on the baby-blue background */
+.team-cta .cta-title {
+  color: #0f3a57; /* slightly darker blue for contrast */
+}
+
+/* Make the button stand out on the baby-blue band while keeping shared .cta-btn behavior */
+.team-cta .cta-btn {
+  color: #ffffff;
+  background: #14375A; /* firm dark blue */
+  border-color: #14375A;
+}
+.team-cta .cta-btn:hover, .team-cta .cta-btn:focus {
+  background: #0f2f46; /* slightly darker on hover */
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Contact page styles */
+
+.contact-banner {
+  /* Two-layer background: gradient overlay + photo */
+  background-image: url('./Assets/img/contact.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center; /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  text-align: center;
+  color: #fff;
+  padding: 4rem 0;
+}
+
+/* Make sure content sits above any decorative overlays */
+.contact-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Optional subtle overlay if you want extra contrast */
+.contact-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(102, 166, 255, 0.25), rgba(167, 139, 250, 0.25));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure headings and leads are above the overlay */
+.contact-banner h1,
+.contact-banner p {
+  position: relative;
+  z-index: 3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-banner {
+    min-height: 40vh;
+    padding: 3rem 1rem;
+  }
+  .team-banner .display-4 {
+    font-size: 2rem;
+  }
+  .team-banner .lead {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+.contact-section .info-tile {
+  background: rgba(20,55,90,0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(20,55,90,0.04);
+  height: 100%;
+}
+
+.contact-section .section-title {
+  color: #14375A;
+}
+
+.contact-section .contact-form-container {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(20,55,90,0.06);
+}
+
+.contact-form .form-control:focus {
+  border-color: #14375A;
+  box-shadow: 0 6px 18px rgba(20,55,90,0.08);
+}
+
+.contact-submit {
+  background: #14375A;
+  border-color: #14375A;
+  color: #fff;
+}
+.contact-submit:hover, .contact-submit:focus {
+  background: #0f2f46;
+  border-color: #0f2f46;
+}
+
+.map-section .map-wrapper {
+  border: 1px solid rgba(20,55,90,0.04);
+}
+
+.faq-section .accordion-button {
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 6px 18px rgba(20,55,90,0.03);
+}
+
+/* Fade-in helper (used by contact, map, faq sections) */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .contact-section .info-tile { padding: 1rem; }
+  .contact-form-container { padding: 1rem; }
 }
