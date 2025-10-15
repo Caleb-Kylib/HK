@@ -697,85 +697,52 @@ background-color: #32c91e;
   transform: translateY(-3px);
 }
 
-
-
-/* Footer */
-.footer {
-    background: #2c3e50;
-    color: white;
-    padding: 60px 0 20px;
+/* Blog page banner */
+.blog-banner {
+  background: linear-gradient(135deg, rgba(20,55,90,0.85), rgba(52,120,200,0.6));
+  background-blend-mode: overlay;
+  background-image: url('Assets/img/pexels-sora-shimazaki-5668773.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
 }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
+/* Blog grid and cards */
+.blog-grid .blog-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(20,55,90,0.05);
+  box-shadow: 0 10px 30px rgba(20,55,90,0.06);
+  display: flex;
+  flex-direction: column;
+}
+.blog-card .card-img-top {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+.blog-card .card-body { flex: 1; }
+.blog-card .card-title { font-size: 1.1rem; color: #14375A; font-weight: 700; }
+.blog-card .card-excerpt { color: #6c7a89; }
+.btn-outline-primary {
+  color: #14375A;
+  border-color: #14375A;
+}
+.btn-outline-primary:hover {
+  background: #14375A;
+  color: #fff;
 }
 
-.footer-section h3,
-.footer-section h4 {
-    color: white;
-    margin-bottom: 1rem;
-}
+/* Article content (single article pages) */
+.prose { max-width: 800px; margin: 0 auto; color: #27343f; line-height: 1.8; }
+.prose h3 { color: #14375A; }
 
-.footer-section p {
-    color: #bdc3c7;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section ul li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-section ul li a {
-    color: #bdc3c7;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-    color: #667eea;
-}
-
-.footer-section .social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.footer-section .social-links a {
-    width: 40px;
-    height: 40px;
-    background: #34495e;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.footer-section .social-links a:hover {
-    background: #667eea;
-    transform: translateY(-3px);
-}
-
-.footer-bottom {
-    border-top: 1px solid #34495e;
-    padding-top: 2rem;
-    text-align: center;
-    color: #bdc3c7;
-}
-
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -1376,9 +1343,4 @@ background-color: #32c91e;
 .fade-in-section.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-@media (max-width: 768px) {
-  .contact-section .info-tile { padding: 1rem; }
-  .contact-form-container { padding: 1rem; }
 }
