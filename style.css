@@ -1638,3 +1638,138 @@ background-color: #32c91e;
   color: #0a1a33;
   transition: 0.3s ease;
 }
+
+/* === Services Page - Why Choose Us Section === */
+.services-why-us {
+  background-color: #eaecec;
+  color: #030303;
+  position: relative;
+}
+
+.services-why-us h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.services-why-us p {
+  font-size: 1rem;
+  color: #020202;
+  line-height: 1.7;
+}
+
+.services-why-us ul li {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.services-why-us ul li i {
+  color: #d4af37; /* gold accent */
+  font-size: 1.2rem;
+}
+
+.services-why-us img {
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.services-why-us img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-why-us {
+    text-align: center;
+  }
+  .services-why-us ul {
+    padding-left: 0;
+  }
+  .services-why-us img {
+    margin-top: 1.5rem;
+  }
+}
+
+/* === Supporting Staff Section (Team Page) === */
+.supporting-staff-section {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.supporting-staff-section h2 {
+  color: #0a1a33;
+  font-size: 2rem;
+}
+
+.supporting-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 2px solid transparent;
+}
+
+.supporting-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-color: #d4af37; /* gold accent */
+}
+
+.supporting-card h5 {
+  color: #111;
+}
+
+.supporting-card p {
+  color: #555;
+}
+
+/* Staff image styling */
+.staff-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border: 3px solid #d4af37;
+  transition: transform 0.4s ease;
+}
+
+.supporting-card:hover .staff-img {
+  transform: scale(1.08);
+}
+
+/* === Fade-up Animation === */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.animate-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+
+/* Animate with stagger effect */
+.supporting-card:nth-child(1) { animation-delay: 0.1s; }
+.supporting-card:nth-child(2) { animation-delay: 0.3s; }
+.supporting-card:nth-child(3) { animation-delay: 0.5s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .staff-img {
+    width: 110px;
+    height: 110px;
+  }
+}
+

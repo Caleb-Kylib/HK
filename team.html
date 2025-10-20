@@ -77,42 +77,45 @@
     </div>
   </section>
 
-  <!-- Supporting Staff -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-5 fw-bold">Supporting Staff</h2>
-      <div class="row g-4">
+  <!-- Supporting Staff Section -->
 
-        <div class="col-md-6 col-lg-4">
-          <div class="team-card text-center bg-white shadow rounded-4 p-4">
-            <img src="./Assets/img/kateryna-hliznitsova-4hVdR-76o0Q-unsplash.jpg" class="staff-img rounded-circle mb-3" alt="Patricia Brown" />
-            <h5 class="fw-bold mb-1">Ms. Patricia Brown</h5>
-            <p class="text-muted mb-2">Legal Secretary</p>
-            <p class="small text-secondary">Ensures all documentation and client communication is handled with professionalism.</p>
-          </div>
+<section class="supporting-staff-section py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold animate-fade-up">Supporting Staff</h2>
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="supporting-card text-center bg-white shadow rounded-4 p-4 animate-fade-up">
+          <img src="./Assets/img/kateryna-hliznitsova-4hVdR-76o0Q-unsplash.jpg" class="staff-img rounded-circle mb-3" alt="Patricia Brown" />
+          <h5 class="fw-bold mb-1">Ms. Patricia Brown</h5>
+          <p class="text-muted mb-2">Legal Secretary</p>
+          <p class="small text-secondary">Ensures all documentation and client communication is handled with professionalism.</p>
         </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="team-card text-center bg-white shadow rounded-4 p-4">
-            <img src="./Assets/img/renaldo-matamoro-86JiKaHF4I8-unsplash.jpg" class="staff-img rounded-circle mb-3" alt="Kevin Lee" />
-            <h5 class="fw-bold mb-1">Mr. Kevin Lee</h5>
-            <p class="text-muted mb-2">Administrative Assistant</p>
-            <p class="small text-secondary">Provides vital support in scheduling and coordination of client appointments.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="team-card text-center bg-white shadow rounded-4 p-4">
-            <img src="./Assets/img/melvin-ankrah-H5RDTai4EwM-unsplash.jpg" class="staff-img rounded-circle mb-3" alt="Jennifer Davis" />
-            <h5 class="fw-bold mb-1">Ms. Jennifer Davis</h5>
-            <p class="text-muted mb-2">Office Manager</p>
-            <p class="small text-secondary">Oversees office operations and ensures seamless communication between departments.</p>
-          </div>
-        </div>
-
       </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="supporting-card text-center bg-white shadow rounded-4 p-4 animate-fade-up">
+          <img src="./Assets/img/renaldo-matamoro-86JiKaHF4I8-unsplash.jpg" class="staff-img rounded-circle mb-3" alt="Kevin Lee" />
+          <h5 class="fw-bold mb-1">Mr. Kevin Lee</h5>
+          <p class="text-muted mb-2">Administrative Assistant</p>
+          <p class="small text-secondary">Provides vital support in scheduling and coordination of client appointments.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="supporting-card text-center bg-white shadow rounded-4 p-4 animate-fade-up">
+          <img src="./Assets/img/melvin-ankrah-H5RDTai4EwM-unsplash.jpg" class="staff-img rounded-circle mb-3" alt="Jennifer Davis" />
+          <h5 class="fw-bold mb-1">Ms. Jennifer Davis</h5>
+          <p class="text-muted mb-2">Office Manager</p>
+          <p class="small text-secondary">Oversees office operations and ensures seamless communication between departments.</p>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <!-- CTA -->
   <section class="team-cta text-center py-5">
@@ -156,6 +159,27 @@
       <p>&copy; 2025 Maiyani & Co Advocates. All Rights Reserved.</p>
     </div>
   </footer>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".animate-fade-up");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // animate once
+          }
+        });
+      },
+      { threshold: 0.2 } // triggers when 20% of the card is visible
+    );
+
+    cards.forEach((card) => observer.observe(card));
+  });
+</script>
+ 
 
 </body>
 </html>
