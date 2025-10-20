@@ -291,8 +291,8 @@ p {
 }
 
 
-
-.services-section {
+/* home services section styles */
+.home-services-section {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
@@ -301,7 +301,7 @@ p {
             justify-content: center;
         }
         
-        .section-title {
+        .home-section-title {
             text-align: center;
             margin-bottom: 60px;
             color: #141212;
@@ -318,7 +318,7 @@ p {
             opacity: 0.9;
         }
         
-        .service-card {
+        .home-service-card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             padding: 35px 25px;
@@ -336,14 +336,14 @@ p {
             max-width: 350px;
         }
         
-        .service-card:hover {
+        .home-service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
             border-color: #667eea;
             background: #fff;
         }
         
-        .service-icon {
+        .home-service-icon {
             width: 70px;
             height: 70px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -355,24 +355,24 @@ p {
             transition: all 0.4s ease;
         }
         
-        .service-card:hover .service-icon {
+        .home-service-card:hover .service-icon {
             transform: scale(1.1) rotate(5deg);
             box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
         }
         
-        .service-icon i {
+        .home-service-icon i {
             font-size: 32px;
             color: #fff;
         }
         
-        .service-card h3 {
+        .home-service-card h3 {
             font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: 15px;
             color: #2d3748;
         }
         
-        .service-card p {
+        .home-service-card p {
             font-size: 0.95rem;
             color: #718096;
             line-height: 1.6;
@@ -387,7 +387,7 @@ p {
             transition: all 0.3s ease;
         }
         
-        .service-card:hover .service-arrow {
+        .home-service-card:hover .service-arrow {
             opacity: 1;
             transform: translateX(5px);
         }
@@ -1423,4 +1423,218 @@ background-color: #32c91e;
   padding-top: 20px;
   margin-top: 40px;
   color: #aab3c4;
+}
+
+/* ===========================================
+   SERVICES PAGE SECTION
+=========================================== */
+.services-page-section {
+  padding: 100px 0;
+  background: linear-gradient(to bottom right, #0a1a33, #1e3a5f);
+  color: #fff;
+}
+
+.services-page-section h2 {
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+}
+
+.services-page-section .service-card {
+  background: #fff;
+  border-radius: 20px;
+  color: #222;
+  text-align: center;
+  padding: 35px 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.services-page-section .service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.services-page-section .service-icon {
+  color: #d4af37;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.services-page-section .service-card h3 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #0a1a33;
+}
+
+.services-page-section .service-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* ===========================================
+   SERVICES PAGE CTA SECTION
+=========================================== */
+.services-cta {
+  background: linear-gradient(to right, #0a1a33, #1e3a5f);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/legal-bg.jpg') center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.services-cta .cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.services-cta h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+
+.services-cta p {
+  font-size: 1.1rem;
+  color: #f1f1f1;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.services-cta .cta-btn {
+  display: inline-block;
+  background: #d4af37;
+  color: #0a1a33;
+  padding: 14px 32px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.services-cta .cta-btn:hover {
+  background: #fff;
+  color: #0a1a33;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.services-cta .cta-content {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* ===========================================
+   SERVICES PAGE BANNER
+=========================================== */
+.services-banner {
+  position: relative;
+  background: linear-gradient(
+      rgba(10, 26, 51, 0.75),
+      rgba(10, 26, 51, 0.75)
+    ),
+    url('/Assets/img/pexels-ekaterina-bolovtsova-6077326.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 160px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.services-banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background-color: #d4af37;
+  border-radius: 2px;
+}
+
+.services-banner h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+
+.services-banner p {
+  font-size: 1.25rem;
+  color: #e8e8e8;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .services-banner {
+    padding: 100px 15px;
+  }
+
+  .services-banner h1 {
+    font-size: 2rem;
+  }
+
+  .services-banner p {
+    font-size: 1rem;
+  }
+}
+
+/* ===========================================
+   SERVICE CARDS ANIMATION
+=========================================== */
+.service-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: animate icon and text slightly */
+.service-card:hover i {
+  color: #d4af37;
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+.service-card i {
+  color: #0a1a33;
+  transition: 0.3s ease;
 }
