@@ -1848,6 +1848,51 @@ background-color: #32c91e;
   }
 }
 
+/* ================================
+   about us PAGE BANNER
+=================================== */
+.about-banner {
+  position: relative;
+  height: 60vh;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('assets/img/about.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.about-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.about-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+.about-banner h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .about-banner {
+    height: 40vh;
+  }
+  .about-banner h1 {
+    font-size: 2rem;
+  }
+}
+
 
 /* ================================
    CONTACT PAGE BANNER
