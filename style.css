@@ -833,98 +833,141 @@ background-color: #32c91e;
     
   
    /*about us page styles*/
-
-   /* Hero Section */
-.about-hero {
-    height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url('/Assets/img/kateryna-hliznitsova-4hVdR-76o0Q-unsplash.jpg') no-repeat center center/cover;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
-}
-
-.about-hero-content {
-    z-index: 2;
-    max-width: 800px;
-    padding: 0 20px;
-}
-
-.about-hero-title {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.about-hero-subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 2.5rem;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.about-hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
-    z-index: 1;
-}
-
-.about-history-section {
-  background-color: #f8f9fc;
+    
+   /* ===== ABOUT US PAGE HERO SECTION ===== */
+   
+   /* Unique Law Firm Styles */
+.lf-hero {
+  height: 70vh;
+  min-height: 500px;
   position: relative;
+  background-image: url('Assets/img/pexels-sora-shimazaki-5668773.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(150, 35, 35);
   overflow: hidden;
 }
 
-.about-title {
-  color: #0d1b2a;
-}
-
-.history-card {
-  background: #ffffff;
-  border-left: 4px solid #0d6efd;
-  transition: all 0.3s ease;
-}
-
-.history-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.about-timeline::before {
-  content: "";
+.lf-hero-overlay {
   position: absolute;
-  left: 0.5rem;
   top: 0;
-  bottom: 0;
-  width: 4px;
-  background: linear-gradient(to bottom, #0d6efd, #007bff);
-  border-radius: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.65), rgba(20, 55, 90, 0.7));
+  z-index: 1;
 }
 
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -14px;
-  width: 16px;
-  height: 16px;
-  background-color: #0d6efd;
-  border: 3px solid #ffffff;
-  border-radius: 50%;
-  top: 1.2rem;
+.lf-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 20px;
+  animation: fadeInUp 1s ease-out;
 }
 
-.mission-vision {
+.lf-hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+}
+
+.lf-hero-subtitle {
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0.95;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments for banner */
+@media (max-width: 768px) {
+  .lf-hero {
+    height: 60vh;
+    min-height: 400px;
+    background-attachment: scroll;
+  }
+  
+  .lf-hero-title {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+  
+  .lf-hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lf-hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .lf-hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+.lf-about-heading,
+.lf-mission-heading,
+.lf-team-heading {
+  font-weight: 700;
+  color: #1d3557;
+}
+
+.lf-about-text {
+  color: #333;
+  line-height: 1.7;
+}
+
+.lf-card {
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.lf-card:hover {
+  transform: translateY(-5px);
+}
+
+.lf-team-card img {
+  height: 280px;
+  object-fit: cover;
+}
+
+.lf-team-name {
+  font-weight: 600;
+  color: #1d3557;
+}
+
+.lf-team-role {
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+
+
+  .mission-vision {
     position: relative;
   }
 
@@ -963,6 +1006,7 @@ background-color: #32c91e;
     transition: all 0.3s ease;
   }
 
+
     /* Achievements Section */
   .achievements {
     background: linear-gradient(135deg, #0b132b, #1c2541);
@@ -982,6 +1026,37 @@ background-color: #32c91e;
     font-size: 2.5rem;
     color: #ffffff;
   }
+
+/* ===== Animations ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+
+}
+
+
 
   /* Team Page Styles */
 .team-banner {
@@ -1770,6 +1845,52 @@ background-color: #32c91e;
   .staff-img {
     width: 110px;
     height: 110px;
+  }
+}
+
+
+/* ================================
+   CONTACT PAGE BANNER
+=================================== */
+.contact-banner {
+  position: relative;
+  height: 60vh;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('assets/img/deal.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.contact-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.contact-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-banner h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .contact-banner {
+    height: 40vh;
+  }
+  .contact-banner h1 {
+    font-size: 2rem;
   }
 }
 
