@@ -1942,3 +1942,147 @@ background-color: #32c91e;
   }
 }
 
+/* ============================
+   BLOG PAGE STYLES
+============================ */
+/* --- Featured Article --- */
+.lf-featured-article h2 {
+  color: #0d223d;
+}
+
+.lf-featured-article p {
+  color: #444;
+}
+
+.lf-featured-article img {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.lf-featured-article img:hover {
+  transform: scale(1.02);
+}
+
+/* --- Categories Section --- */
+.lf-blog-categories h2 {
+  color: #0d223d;
+}
+
+.lf-blog-categories .btn {
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.lf-blog-categories .btn:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+}
+
+/* --- Search Bar --- */
+.lf-blog-search input {
+  max-width: 500px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+}
+
+.lf-blog-search input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 4px rgba(13, 110, 253, 0.5);
+}
+/* --- Author Spotlight --- */
+.lf-author-spotlight {
+  background-color: #f7f7f7;
+}
+
+.lf-author-spotlight h2 {
+  color: #0d223d;
+}
+
+.lf-author-spotlight h6 {
+  font-weight: 600;
+}
+
+.lf-author-spotlight img {
+  border: 3px solid #0d6efd;
+  transition: transform 0.3s ease;
+}
+
+.lf-author-spotlight img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Trending Articles --- */
+.lf-trending-articles {
+  background-color: #fff;
+}
+
+.lf-trending-articles h2 {
+  color: #0d223d;
+}
+
+.lf-trending-articles .list-group-item {
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+.lf-trending-articles .list-group-item a {
+  color: #0d223d;
+  transition: color 0.3s ease;
+}
+
+.lf-trending-articles .list-group-item a:hover {
+  color: #0d6efd;
+}
+
+/* --- Newsletter Signup --- */
+.lf-newsletter {
+  background-image: linear-gradient(135deg, #0d223d, #0d6efd);
+}
+
+.lf-newsletter h2 {
+  font-size: 2rem;
+}
+
+.lf-newsletter p {
+  font-size: 1rem;
+  color: #f8f9fa;
+}
+
+.lf-newsletter .form-control {
+  max-width: 400px;
+  border-radius: 30px;
+}
+
+.lf-newsletter .btn {
+  border-radius: 30px;
+}
+
+/* --- Pagination --- */
+.lf-blog-pagination .pagination .page-link {
+  color: #0d223d;
+  border-radius: 50px;
+  margin: 0 0.25rem;
+}
+
+.lf-blog-pagination .pagination .page-item.active .page-link {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: #fff;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .blog-hero-banner h1 {
+    font-size: 2rem;
+  }
+  .lf-blog-search input {
+    width: 80%;
+  }
+  .lf-featured-article img {
+    width: 100%;
+  }
+}
