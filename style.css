@@ -1509,7 +1509,7 @@ background-color: #32c91e;
 
 .services-page-section .service-card p {
   font-size: 0.95rem;
-  color: #555;
+  color: #b34545;
   margin-top: 10px;
 }
 
@@ -1679,7 +1679,7 @@ background-color: #32c91e;
 
 /* === Services Page - Why Choose Us Section === */
 .services-why-us {
-  background-color: #eaecec;
+  background-color: #8fdddd;
   color: #030303;
   position: relative;
 }
@@ -2642,4 +2642,593 @@ background-color: #32c91e;
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
+}
+
+/* ============================
+   BLOG PAGE IMPROVEMENTS
+============================ */
+
+/* Blog Read Button */
+.blog-read-btn {
+  background: linear-gradient(135deg, #14375A 0%, #0f2f46 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-read-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0f2f46 0%, #14375A 100%);
+  transition: left 0.3s ease;
+  z-index: 0;
+}
+
+.blog-read-btn span,
+.blog-read-btn i {
+  position: relative;
+  z-index: 1;
+}
+
+.blog-read-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(20, 55, 90, 0.3);
+  color: #fff;
+}
+
+.blog-read-btn:hover::before {
+  left: 0;
+}
+
+.blog-read-btn i {
+  transition: transform 0.3s ease;
+}
+
+.blog-read-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Trending Articles Section */
+.trending-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.trending-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.trending-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #14375A, #667eea);
+  transition: width 0.3s ease;
+}
+
+.trending-card:hover::before {
+  width: 100%;
+  opacity: 0.05;
+}
+
+.trending-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-color: #14375A;
+}
+
+.trending-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.trending-icon i {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.trending-card:hover .trending-icon {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.trending-number {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #14375A;
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.trending-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #14375A;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.trending-meta {
+  color: #6c7a89;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.trending-link {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.trending-link:hover {
+  color: #14375A;
+  gap: 0.5rem;
+}
+
+.trending-link i {
+  transition: transform 0.3s ease;
+}
+
+.trending-link:hover i {
+  transform: translateX(5px);
+}
+
+/* ============================
+   TEAM PAGE IMPROVEMENTS
+============================ */
+
+/* Team Section Badge */
+.team-section-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Enhanced Team Cards */
+.team-card-enhanced {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card-enhanced::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.team-card-enhanced:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-color: #667eea;
+}
+
+.team-img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.team-badge {
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #14375A;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.team-role {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.team-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.team-social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f8f9fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #14375A;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.team-social-icon:hover {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* ============================
+   CONTACT PAGE FAQ IMPROVEMENTS
+============================ */
+
+/* FAQ Badge */
+.faq-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* FAQ Accordion */
+.faq-accordion .faq-item {
+  border: none;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.faq-accordion .faq-item:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.faq-question {
+  background: #fff;
+  border: none;
+  padding: 1.5rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #14375A;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-radius: 15px;
+}
+
+.faq-question:not(.collapsed) {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+.faq-question:not(.collapsed) .faq-icon {
+  color: #fff;
+}
+
+.faq-question:hover {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+}
+
+.faq-question:hover .faq-icon {
+  color: #fff;
+}
+
+.faq-icon {
+  color: #667eea;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+.faq-question::after {
+  background-image: none;
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-question:not(.collapsed)::after {
+  transform: rotate(180deg);
+  color: #fff;
+}
+
+.accordion-body {
+  padding: 1.5rem;
+  background: #f8f9fb;
+  color: #5a6c7d;
+  line-height: 1.8;
+  border-top: 3px solid #667eea;
+}
+
+/* ============================
+   ABOUT PAGE MVV IMPROVEMENTS
+============================ */
+
+/* MVV Badge */
+.mvv-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Mission Vision Section */
+.mission-vision-section {
+  background: linear-gradient(135deg, #f8f9fb 0%, #e8eef5 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-vision-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* MVV Cards */
+.mvv-card {
+  height: 100%;
+  perspective: 1000px;
+}
+
+.mvv-card-inner {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  border: 3px solid transparent;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.mvv-card-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  transition: height 0.3s ease;
+}
+
+.mission-card-enhanced .mvv-card-inner::before {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.vision-card-enhanced .mvv-card-inner::before {
+  background: linear-gradient(90deg, #f093fb, #f5576c);
+}
+
+.values-card-enhanced .mvv-card-inner::before {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+
+.mvv-card:hover .mvv-card-inner {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.mission-card-enhanced:hover .mvv-card-inner {
+  border-color: #667eea;
+}
+
+.vision-card-enhanced:hover .mvv-card-inner {
+  border-color: #f5576c;
+}
+
+.values-card-enhanced:hover .mvv-card-inner {
+  border-color: #00f2fe;
+}
+
+.mvv-card:hover .mvv-card-inner::before {
+  height: 100%;
+  opacity: 0.05;
+}
+
+/* MVV Icon Wrapper */
+.mvv-icon-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.mission-icon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.vision-icon {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);
+}
+
+.values-icon {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+}
+
+.mvv-icon-wrapper i {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.mvv-card:hover .mvv-icon-wrapper {
+  transform: scale(1.15) rotate(10deg);
+}
+
+/* MVV Content */
+.mvv-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #14375A;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.mvv-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
+}
+
+.vision-card-enhanced .mvv-divider {
+  background: linear-gradient(90deg, #f093fb, #f5576c);
+}
+
+.values-card-enhanced .mvv-divider {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+
+.mvv-text {
+  color: #5a6c7d;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.mvv-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mvv-list li {
+  color: #14375A;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.mvv-list li i {
+  color: #667eea;
+  font-size: 1rem;
+}
+
+.vision-card-enhanced .mvv-list li i {
+  color: #f5576c;
+}
+
+.values-card-enhanced .mvv-list li i {
+  color: #00f2fe;
+}
+
+.mvv-list li:hover {
+  transform: translateX(5px);
+  color: #667eea;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mvv-card-inner {
+    padding: 2rem 1.5rem;
+  }
+  
+  .mvv-icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .mvv-icon-wrapper i {
+    font-size: 2rem;
+  }
+  
+  .mvv-title {
+    font-size: 1.3rem;
+  }
 }
