@@ -192,7 +192,7 @@ p {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url('/Assets/img/pexels-sora-shimazaki-5668773.jpg') no-repeat center center/cover;
+                url('/Assets/img/contact.jpg') no-repeat center center/cover;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -2111,4 +2111,535 @@ background-color: #32c91e;
   .lf-featured-article img {
     width: 100%;
   }
+}
+
+/* ============================
+   ENHANCED LANDING PAGE STYLES
+   Professional Law Firm Design
+============================ */
+
+/* === Section Labels === */
+.section-label {
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* === Enhanced About Section === */
+.about-section {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.about-image-wrapper {
+  position: relative;
+}
+
+.about-main-image {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+.about-main-image:hover {
+  transform: scale(1.02);
+}
+
+/* Decorative element behind image */
+.about-image-decoration {
+  position: absolute;
+  top: 20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+/* === Practice Areas Section === */
+.practice-areas-section {
+  background-color: #f8f9fb;
+}
+
+.practice-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 15px rgba(10, 26, 51, 0.08);
+}
+
+.practice-card:hover {
+  transform: translateY(-8px);
+  border-color: #667eea;
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.15);
+}
+
+.practice-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.practice-card:hover .practice-icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.practice-icon-wrapper i {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.practice-card h5 {
+  color: #0a1a33;
+  margin-top: 1rem;
+}
+
+.practice-card p {
+  color: #5f6675;
+  line-height: 1.6;
+}
+
+/* === Enhanced Testimonials Section === */
+.testimonial-section {
+  background-color: #ffffff;
+}
+
+.testimonial-card-enhanced {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 10px 40px rgba(10, 26, 51, 0.1);
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial-card-enhanced:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(10, 26, 51, 0.15);
+  border-color: rgba(102, 126, 234, 0.2);
+}
+
+.quote-icon {
+  text-align: center;
+}
+
+.quote-icon i {
+  font-size: 2.5rem;
+  color: rgba(102, 126, 234, 0.2);
+}
+
+.testimonial-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #2d3748;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.client-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #667eea;
+  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.2);
+}
+
+.client-details {
+  text-align: left;
+}
+
+.client-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0a1a33;
+}
+
+.client-role {
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+/* Swiper Navigation Buttons - Enhanced */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #667eea;
+  background: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #667eea;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* === Achievements Section === */
+.achievements-section {
+  background: linear-gradient(135deg, #0a1a33 0%, #1e3a5f 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.achievements-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+}
+
+.achievement-card-new {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  transition: all 0.4s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.achievement-card-new:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.achievement-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.achievement-card-new:hover .achievement-icon {
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+}
+
+.achievement-icon i {
+  font-size: 2.5rem;
+  color: #0a1a33;
+}
+
+.achievement-number {
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 1rem 0 0.5rem;
+}
+
+.achievement-label {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Notable Case Results Highlight */
+.case-results-highlight {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.case-result-item {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.75rem 0;
+}
+
+.case-result-item i {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* === Enhanced CTA Section === */
+.cta-section-enhanced {
+  background: linear-gradient(135deg, #0a1a33 0%, #14375A 100%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section-enhanced::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.cta-section-enhanced::after {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(118, 75, 162, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.cta-section-enhanced .container {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-label {
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.cta-description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+}
+
+.btn-cta-primary {
+  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+  color: #0a1a33;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cta-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f4d03f 0%, #d4af37 100%);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.btn-cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+  color: #0a1a33;
+}
+
+.btn-cta-primary:hover::before {
+  left: 0;
+}
+
+.cta-subtext {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-subtext a {
+  color: #d4af37;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cta-subtext a:hover {
+  color: #f4d03f;
+  text-decoration: underline;
+}
+
+/* === Responsive Design for Enhanced Sections === */
+@media (max-width: 992px) {
+  .about-image-decoration {
+    display: none;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+  }
+  
+  .achievement-number {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .practice-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .practice-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .practice-icon-wrapper i {
+    font-size: 1.5rem;
+  }
+  
+  .testimonial-card-enhanced {
+    padding: 2rem 1.5rem;
+  }
+  
+  .testimonial-text {
+    font-size: 1rem;
+  }
+  
+  .client-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .client-details {
+    text-align: center;
+  }
+  
+  .achievement-number {
+    font-size: 2rem;
+  }
+  
+  .achievement-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .achievement-icon i {
+    font-size: 1.75rem;
+  }
+  
+  .cta-title {
+    font-size: 1.75rem;
+  }
+  
+  .cta-description {
+    font-size: 1rem;
+  }
+  
+  .btn-cta-primary {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-label {
+    font-size: 0.75rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .practice-card h5 {
+    font-size: 1rem;
+  }
+  
+  .case-result-item {
+    font-size: 0.9rem;
+  }
+}
+
+/* === Animation Enhancements === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply animations when sections become visible */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Staggered animation for practice cards */
+.practice-card {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.practice-areas-section.visible .practice-card:nth-child(1) { animation-delay: 0.1s; }
+.practice-areas-section.visible .practice-card:nth-child(2) { animation-delay: 0.2s; }
+.practice-areas-section.visible .practice-card:nth-child(3) { animation-delay: 0.3s; }
+.practice-areas-section.visible .practice-card:nth-child(4) { animation-delay: 0.4s; }
+.practice-areas-section.visible .practice-card:nth-child(5) { animation-delay: 0.5s; }
+.practice-areas-section.visible .practice-card:nth-child(6) { animation-delay: 0.6s; }
+.practice-areas-section.visible .practice-card:nth-child(7) { animation-delay: 0.7s; }
+.practice-areas-section.visible .practice-card:nth-child(8) { animation-delay: 0.8s; }
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
