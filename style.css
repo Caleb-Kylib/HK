@@ -1910,7 +1910,7 @@ background-color: #32c91e;
 .blog-banner {
   background: linear-gradient(135deg, rgba(20,55,90,0.85), rgba(52,120,200,0.6));
   background-blend-mode: overlay;
-  background-image: url('Assets/img/pexels-sora-shimazaki-5668773.jpg');
+  background-image: url('./Assets/img/booksbanner.jpg');
   background-size: cover;
   background-position: center;
   min-height: 40vh;
