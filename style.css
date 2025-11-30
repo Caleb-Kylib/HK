@@ -1452,6 +1452,17 @@ background-color: #32c91e;
   box-shadow: 0 6px 18px rgba(20,55,90,0.03);
 }
 
+.faq-section .accordion-body {
+  color: #2f3b45;
+  font-size: 0.98rem;
+}
+
+.map-section .map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Fade-in helper (used by contact, map, faq sections) */
 .fade-in-section {
   opacity: 0;
