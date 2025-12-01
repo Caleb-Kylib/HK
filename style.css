@@ -2336,11 +2336,6 @@ background-color: #32c91e;
   border-color: rgba(102,126,234,0.15);
 }
 
-.testimonial-header {
-  margin-bottom: 1.5rem;
-  display: none;
-}
-
 /* Stars at top */
 .stars-rating {
   display: flex;
@@ -2405,25 +2400,7 @@ background-color: #32c91e;
   margin: 0;
 }
 
-.client-type {
-  font-size: 0.85rem;
-  color: #94a3b8;
-  margin: 0.25rem 0 0 0;
-}
-}
-
-.client-name {
-  font-weight: 600;
-  color: #14375A;
-  font-size: 0.95rem;
-  margin: 0;
-}
-
-.client-type {
-  font-size: 0.85rem;
-  color: #94a3b8;
-  margin: 0.25rem 0 0 0;
-}
+.client-type { font-size: 0.85rem; color: #94a3b8; margin: 0.25rem 0 0 0; }
 
 /* Swiper Navigation - Premium Style */
 .testimonial-swiper .swiper-pagination-bullet {
@@ -3496,4 +3473,5 @@ html {
         font-size: 1.5rem;
     }
 }
+
 
