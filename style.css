@@ -2327,6 +2327,7 @@ background-color: #32c91e;
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* Space content evenly */
 }
 
 .testimonial-card:hover {
@@ -2337,12 +2338,15 @@ background-color: #32c91e;
 
 .testimonial-header {
   margin-bottom: 1.5rem;
+  display: none;
 }
 
+/* Stars at top */
 .stars-rating {
   display: flex;
   gap: 0.3rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  order: 1; /* First */
 }
 
 .stars-rating i {
@@ -2355,23 +2359,27 @@ background-color: #32c91e;
   font-weight: 600;
   color: #14375A;
   line-height: 1.4;
-  margin: 0;
+  margin: 0 0 1rem 0;
+  order: 2; /* Second */
 }
 
 .review-body {
   font-size: 0.95rem;
   line-height: 1.7;
   color: #475569;
-  margin: 1.25rem 0 1.75rem 0;
+  margin: 0;
   flex-grow: 1;
+  order: 3; /* Third */
 }
 
 .testimonial-footer {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding-top: 1.25rem;
+  padding-top: 1.5rem;
   border-top: 1px solid rgba(20,55,90,0.08);
+  margin-top: 1.5rem;
+  order: 4; /* Last */
 }
 
 .client-avatar-wrapper {
@@ -2388,7 +2396,20 @@ background-color: #32c91e;
 
 .client-meta {
   flex: 1;
-  min-width: 0;
+}
+
+.client-name {
+  font-weight: 600;
+  color: #14375A;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.client-type {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 0.25rem 0 0 0;
+}
 }
 
 .client-name {
@@ -2446,9 +2467,6 @@ background-color: #32c91e;
   }
   .testimonial-card {
     padding: 1.75rem;
-  }
-  .review-title {
-    font-size: 1rem;
   }
   .review-body {
     font-size: 0.9rem;
