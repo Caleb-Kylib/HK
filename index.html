@@ -332,6 +332,9 @@
             <!-- Testimonial 1 -->
             <div class="swiper-slide">
               <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-left"></i>
+                </div>
                 <div class="testimonial-header">
                   <div class="stars-rating">
                     <i class="bi bi-star-fill"></i>
@@ -358,6 +361,9 @@
             <!-- Testimonial 2 -->
             <div class="swiper-slide">
               <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-left"></i>
+                </div>
                 <div class="testimonial-header">
                   <div class="stars-rating">
                     <i class="bi bi-star-fill"></i>
@@ -384,6 +390,9 @@
             <!-- Testimonial 3 -->
             <div class="swiper-slide">
               <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-left"></i>
+                </div>
                 <div class="testimonial-header">
                   <div class="stars-rating">
                     <i class="bi bi-star-fill"></i>
@@ -410,6 +419,9 @@
             <!-- Testimonial 4 -->
             <div class="swiper-slide">
               <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-left"></i>
+                </div>
                 <div class="testimonial-header">
                   <div class="stars-rating">
                     <i class="bi bi-star-fill"></i>
@@ -440,8 +452,6 @@
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </div>
-      </div>
-    </section>
       </div>
     </section>
 
@@ -656,14 +666,38 @@
      <script>
      var swiper = new Swiper(".mySwiper", {
       loop: true,
-       autoplay: { delay: 4000 },
-      pagination: { el: ".swiper-pagination", clickable: true },
+      autoplay: { 
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+      pagination: { 
+        el: ".swiper-pagination", 
+        clickable: true,
+        dynamicBullets: true
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-       effect: "fade",
-      speed: 800,
+      effect: "slide",
+      speed: 1000,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      grabCursor: true,
+      keyboard: {
+        enabled: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        992: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+        }
+      }
     });
    </script>
    
