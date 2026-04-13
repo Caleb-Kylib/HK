@@ -37,47 +37,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Destination Filter Functionality
-const filterButtons = document.querySelectorAll('.filter-btn');
-const destinationCards = document.querySelectorAll('.destination-card');
+// Interactive Card Animations (Generic)
+const animateCards = document.querySelectorAll('.home-service-card, .team-card, .article-card');
 
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Remove active class from all buttons
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        // Add active class to clicked button
-        button.classList.add('active');
-        
-        const filterValue = button.getAttribute('data-filter');
-        
-        destinationCards.forEach(card => {
-            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                card.style.display = 'block';
-                card.style.animation = 'fadeIn 0.5s ease-in-out';
-            } else {
-                card.style.display = 'none';
-            }
-        });
+animateCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-10px)';
+    });
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0)';
     });
 });
+
 
 // Contact Form Handling
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        
+
         // Get form data
         const formData = new FormData(contactForm);
         const formObject = {};
         formData.forEach((value, key) => {
             formObject[key] = value;
         });
-        
+
         // Basic validation
         const requiredFields = ['name', 'email', 'subject', 'message'];
         let isValid = true;
-        
+
         requiredFields.forEach(field => {
             const input = contactForm.querySelector(`[name="${field}"]`);
             if (!input.value.trim()) {
@@ -87,7 +76,7 @@ if (contactForm) {
                 input.style.borderColor = '#e1e5e9';
             }
         });
-        
+
         if (isValid) {
             // Show success message
             showNotification('Thank you for your message! We will get back to you soon.', 'success');
@@ -105,7 +94,7 @@ function showNotification(message, type = 'info') {
     if (existingNotification) {
         existingNotification.remove();
     }
-    
+
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
@@ -115,7 +104,7 @@ function showNotification(message, type = 'info') {
             <button class="notification-close">&times;</button>
         </div>
     `;
-    
+
     // Add styles
     notification.style.cssText = `
         position: fixed;
@@ -130,10 +119,10 @@ function showNotification(message, type = 'info') {
         max-width: 400px;
         animation: slideInRight 0.3s ease-out;
     `;
-    
+
     // Add to page
     document.body.appendChild(notification);
-    
+
     // Auto remove after 5 seconds
     setTimeout(() => {
         if (notification.parentNode) {
@@ -141,7 +130,7 @@ function showNotification(message, type = 'info') {
             setTimeout(() => notification.remove(), 300);
         }
     }, 5000);
-    
+
     // Close button functionality
     const closeBtn = notification.querySelector('.notification-close');
     closeBtn.addEventListener('click', () => {
@@ -259,11 +248,11 @@ images.forEach(img => imageObserver.observe(img));
 
 // Form field focus effects
 document.querySelectorAll('input, select, textarea').forEach(field => {
-    field.addEventListener('focus', function() {
+    field.addEventListener('focus', function () {
         this.parentElement.classList.add('focused');
     });
-    
-    field.addEventListener('blur', function() {
+
+    field.addEventListener('blur', function () {
         if (!this.value) {
             this.parentElement.classList.remove('focused');
         }
@@ -272,12 +261,12 @@ document.querySelectorAll('input, select, textarea').forEach(field => {
 
 // Add loading state to buttons
 document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
+    btn.addEventListener('click', function (e) {
         if (this.type === 'submit') {
             const originalText = this.textContent;
             this.textContent = 'Sending...';
             this.disabled = true;
-            
+
             // Re-enable after 3 seconds (for demo purposes)
             setTimeout(() => {
                 this.textContent = originalText;
@@ -313,35 +302,35 @@ function animateNumber(element, start, end, duration, originalText) {
     const startTime = performance.now();
     const isPercentage = originalText.includes('%');
     const isPlus = originalText.includes('+');
-    
+
     function updateNumber(currentTime) {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
         const current = Math.floor(start + (end - start) * progress);
-        
+
         let displayText = current.toString();
         if (isPercentage) displayText += '%';
         if (isPlus) displayText += '+';
-        
+
         element.textContent = displayText;
-        
+
         if (progress < 1) {
             requestAnimationFrame(updateNumber);
         } else {
             element.textContent = originalText;
         }
     }
-    
+
     requestAnimationFrame(updateNumber);
 }
 
 // Add hover effects to cards
 document.querySelectorAll('.destination-card, .service-card, .team-member').forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         this.style.transform = 'translateY(-10px) scale(1.02)';
     });
-    
-    card.addEventListener('mouseleave', function() {
+
+    card.addEventListener('mouseleave', function () {
         this.style.transform = 'translateY(0) scale(1)';
     });
 });
@@ -357,7 +346,7 @@ function showTestimonial(index) {
     // Remove active class from all testimonials and dots
     testimonials.forEach(testimonial => testimonial.classList.remove('active'));
     dots.forEach(dot => dot.classList.remove('active'));
-    
+
     // Add active class to current testimonial and dot
     if (testimonials[index]) {
         testimonials[index].classList.add('active');
@@ -408,7 +397,7 @@ function stopTestimonialAutoPlay() {
 // Start auto-play when page loads
 if (testimonials.length > 0) {
     startTestimonialAutoPlay();
-    
+
     // Pause auto-play on hover
     const carousel = document.querySelector('.testimonials-carousel');
     if (carousel) {
@@ -438,9 +427,9 @@ galleryFilterButtons.forEach(button => {
         galleryFilterButtons.forEach(btn => btn.classList.remove('active'));
         // Add active class to clicked button
         button.classList.add('active');
-        
+
         const filterValue = button.getAttribute('data-filter');
-        
+
         galleryItems.forEach(item => {
             if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
                 item.style.display = 'block';
@@ -455,20 +444,20 @@ galleryFilterButtons.forEach(button => {
 // Lightbox Functionality
 function openLightbox(index) {
     currentImageIndex = index;
-    filteredImages = Array.from(galleryItems).filter(item => 
+    filteredImages = Array.from(galleryItems).filter(item =>
         item.style.display !== 'none'
     );
-    
+
     const currentItem = filteredImages[currentImageIndex];
     const img = currentItem.querySelector('img');
     const title = currentItem.querySelector('.gallery-info h3').textContent;
     const location = currentItem.querySelector('.gallery-info p').textContent;
-    
+
     lightboxImage.src = img.src;
     lightboxImage.alt = img.alt;
     lightboxTitle.textContent = title;
     lightboxLocation.textContent = location;
-    
+
     lightbox.style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
@@ -484,7 +473,7 @@ function showNextImage() {
     const img = currentItem.querySelector('img');
     const title = currentItem.querySelector('.gallery-info h3').textContent;
     const location = currentItem.querySelector('.gallery-info p').textContent;
-    
+
     lightboxImage.src = img.src;
     lightboxImage.alt = img.alt;
     lightboxTitle.textContent = title;
@@ -497,7 +486,7 @@ function showPrevImage() {
     const img = currentItem.querySelector('img');
     const title = currentItem.querySelector('.gallery-info h3').textContent;
     const location = currentItem.querySelector('.gallery-info p').textContent;
-    
+
     lightboxImage.src = img.src;
     lightboxImage.alt = img.alt;
     lightboxTitle.textContent = title;
@@ -536,7 +525,7 @@ if (lightbox) {
 // Keyboard navigation for lightbox
 document.addEventListener('keydown', (e) => {
     if (lightbox.style.display === 'block') {
-        switch(e.key) {
+        switch (e.key) {
             case 'Escape':
                 closeLightbox();
                 break;
@@ -551,13 +540,13 @@ document.addEventListener('keydown', (e) => {
 });
 
 // Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Mara Tours website loaded successfully!');
-    
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('HakiLine Advocates website loaded successfully!');
+
     // Add any additional initialization code here
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === currentPage) {
@@ -573,18 +562,18 @@ const globalSlides = document.querySelectorAll("#globalTestimonialSlider .testim
 let globalIndex = 0;
 
 document.getElementById("nextGlobal").addEventListener("click", () => {
-  globalSlides[globalIndex].classList.remove("active");
-  globalIndex = (globalIndex + 1) % globalSlides.length;
-  globalSlides[globalIndex].classList.add("active");
+    globalSlides[globalIndex].classList.remove("active");
+    globalIndex = (globalIndex + 1) % globalSlides.length;
+    globalSlides[globalIndex].classList.add("active");
 });
 
 document.getElementById("prevGlobal").addEventListener("click", () => {
-  globalSlides[globalIndex].classList.remove("active");
-  globalIndex = (globalIndex - 1 + globalSlides.length) % globalSlides.length;
-  globalSlides[globalIndex].classList.add("active");
+    globalSlides[globalIndex].classList.remove("active");
+    globalIndex = (globalIndex - 1 + globalSlides.length) % globalSlides.length;
+    globalSlides[globalIndex].classList.add("active");
 });
 
 // Optional auto-slide
 setInterval(() => {
-  document.getElementById("nextGlobal").click();
+    document.getElementById("nextGlobal").click();
 }, 6000);
