@@ -377,50 +377,125 @@ p {
 }
 
 /* === ABOUT SECTION STYLES === */
-
-.about-container {
-  padding: 80px 15px;
-  max-width: 1200px;
-  margin: 0 auto;
+.about-section {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
 }
 
 .about-content {
-  padding-right: 20px;
+  padding-right: 2rem;
 }
 
-.section-subtitle {
+.section-label {
   display: inline-block;
-  color: #FF6B6B;
-  font-weight: 600;
-  font-size: 0.95rem;
+  color: #667eea;
+  font-weight: 700;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 12px;
+  letter-spacing: 2px;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 8px 16px;
+  border-radius: 50px;
+  margin-bottom: 1rem !important;
 }
 
 .section-title {
-  font-size: 2.75rem;
-  font-weight: 700;
-  color: #2C3E50;
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0a1a33;
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .lead {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: #34495E;
-  line-height: 1.7;
-}
-
-.about-description {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
+  font-weight: 400;
   color: #5A6C7D;
   line-height: 1.8;
-  margin-bottom: 0;
 }
 
+/* Feature Small Icons for About Section */
+.feature-small-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  color: #667eea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-/* home services section styles */
+.d-flex:hover .feature-small-icon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.about-actions {
+  margin-top: 2.5rem;
+}
+
+/* Image Wrapper and Decorations */
+.about-image-wrapper {
+  position: relative;
+  border-radius: 24px;
+  padding: 20px;
+  z-index: 1;
+}
+
+/* Beautiful offset background block behind the image */
+.about-image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 90%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.05));
+  border-radius: 24px;
+  z-index: -1;
+  transform: translate(15px, -15px);
+  transition: transform 0.5s ease;
+}
+
+.about-image-wrapper:hover::before {
+  transform: translate(25px, -25px);
+}
+
+.about-main-image {
+  border-radius: 24px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-image-wrapper:hover .about-main-image {
+  transform: scale(1.02);
+}
+
+.about-image-decoration {
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.15;
+  filter: blur(40px);
+}
+
 .home-services-section {
   max-width: 1200px;
   margin: 0 auto;
@@ -2487,9 +2562,12 @@ p {
 
 /* === Section Labels === */
 .section-label {
-  font-size: 0.875rem;
-  letter-spacing: 2px;
-  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #667eea !important;
+  text-transform: uppercase;
 }
 
 /* === Enhanced About Section === */
@@ -2522,6 +2600,26 @@ p {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
   border-radius: 1rem;
   z-index: 1;
+}
+
+.feature-small-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.about-content .row:hover .feature-small-icon {
+  background: #667eea;
+  color: #fff;
+  transform: scale(1.1);
 }
 
 /* === Practice Areas Section === */
@@ -3156,7 +3254,7 @@ p {
   }
 
   .section-title {
-    font-size: 1.75rem;
+    font-size: 2.25rem;
   }
 
   .practice-card h5 {
