@@ -155,9 +155,8 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.destination-card, .service-card, .feature-card, .team-member, .faq-item');
+    const animatedElements = document.querySelectorAll('.fade-in-section, .team-cta-fade, .service-card, .staff-card');
     animatedElements.forEach(el => {
-        el.classList.add('fade-in');
         observer.observe(el);
     });
 });
