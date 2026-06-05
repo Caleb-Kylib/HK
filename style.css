@@ -2295,7 +2295,7 @@ p {
   height: 60vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url('assets/img/about.jpg') no-repeat center center/cover;
+    url('assets/img/court.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3102,6 +3102,243 @@ p {
   color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* === Our History Section (About Page) === */
+.firm-history {
+  position: relative;
+  background: #ffffff;
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+.firm-history::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 0% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse at 100% 20%, rgba(11, 35, 69, 0.04) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.firm-history .container {
+  position: relative;
+  z-index: 1;
+}
+
+.firm-history__media {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.firm-history__frame {
+  position: absolute;
+  inset: -14px -14px 14px 14px;
+  border: 2px solid rgba(212, 175, 55, 0.55);
+  border-radius: 1.25rem;
+  z-index: 0;
+  transition: transform 0.35s ease;
+}
+
+.firm-history__media:hover .firm-history__frame {
+  transform: translate(4px, -4px);
+}
+
+.firm-history__image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 48px rgba(11, 35, 69, 0.14);
+  transition: transform 0.35s ease;
+}
+
+.firm-history__media:hover .firm-history__image {
+  transform: scale(1.02);
+}
+
+.firm-history__badge {
+  position: absolute;
+  bottom: -18px;
+  right: 24px;
+  z-index: 2;
+  background: linear-gradient(135deg, #0B2345 0%, #14375A 100%);
+  color: #ffffff;
+  padding: 1rem 1.35rem;
+  border-radius: 0.85rem;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(11, 35, 69, 0.25);
+  border: 2px solid rgba(212, 175, 55, 0.35);
+  min-width: 110px;
+}
+
+.firm-history__badge-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 0.15rem;
+}
+
+.firm-history__badge-year {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #D4AF37;
+  line-height: 1;
+}
+
+.firm-history__content {
+  padding-left: 0.5rem;
+}
+
+.firm-history__eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 0.75rem;
+}
+
+.firm-history__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: #0B2345;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.firm-history__divider {
+  width: 64px;
+  height: 3px;
+  background: linear-gradient(90deg, #D4AF37, rgba(212, 175, 55, 0.35));
+  border-radius: 2px;
+  margin-bottom: 1.75rem;
+}
+
+.firm-history__text {
+  color: #4A4A4A;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.firm-history__text strong {
+  color: #0B2345;
+  font-weight: 600;
+}
+
+.firm-history__highlights {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.firm-history__highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: #4A4A4A;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.firm-history__highlight-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 175, 55, 0.12);
+  color: #0B2345;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.firm-history__highlights li:hover .firm-history__highlight-icon {
+  background: #D4AF37;
+  color: #0B2345;
+}
+
+.firm-history__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #0B2345;
+  text-decoration: none;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.45);
+  transition: color 0.3s ease, border-color 0.3s ease, gap 0.3s ease;
+}
+
+.firm-history__cta i {
+  font-size: 0.85rem;
+  color: #D4AF37;
+  transition: transform 0.3s ease;
+}
+
+.firm-history__cta:hover {
+  color: #D4AF37;
+  border-color: #D4AF37;
+  gap: 0.85rem;
+}
+
+.firm-history__cta:hover i {
+  transform: translateX(4px);
+}
+
+@media (max-width: 991.98px) {
+  .firm-history {
+    padding: 4rem 0;
+  }
+
+  .firm-history__content {
+    padding-left: 0;
+    padding-top: 1.5rem;
+  }
+
+  .firm-history__media {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .firm-history {
+    padding: 3.5rem 0;
+  }
+
+  .firm-history__badge {
+    right: 16px;
+    bottom: -14px;
+    padding: 0.85rem 1.1rem;
+  }
+
+  .firm-history__badge-year {
+    font-size: 1.5rem;
+  }
+
+  .firm-history__highlights {
+    margin: 1.5rem 0 2rem;
+  }
 }
 
 /* === Premium Achievements Section (About Page) === */
@@ -4350,6 +4587,141 @@ html {
 .home-service-card p {
   color: #666;
   transition: all 0.3s ease;
+}
+
+/* === Services Page — Practice Area Cards === */
+.services-section {
+  position: relative;
+  background-color: #ffffff;
+  background-image: radial-gradient(rgba(11, 35, 69, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.services-section__title {
+  color: #0B2345;
+  font-family: 'Outfit', sans-serif;
+}
+
+.service-area-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.25rem 2rem 2rem;
+  height: 100%;
+  box-shadow: 0 8px 30px rgba(11, 35, 69, 0.07);
+  border: 1px solid rgba(11, 35, 69, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.service-area-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(11, 35, 69, 0.12);
+}
+
+.service-area-card__icon {
+  font-size: 2.25rem;
+  color: #D4AF37;
+  margin-bottom: 1.25rem;
+  line-height: 1;
+}
+
+.service-area-card__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0B2345;
+  margin-bottom: 0.85rem;
+  line-height: 1.35;
+}
+
+.service-area-card__desc {
+  font-size: 0.925rem;
+  color: #4A4A4A;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.service-area-card__keys-heading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0B2345;
+  margin-bottom: 0.85rem;
+  align-self: flex-start;
+  width: 100%;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.service-area-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 1.75rem;
+  width: 100%;
+  max-width: 280px;
+  text-align: left;
+}
+
+.service-area-card__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: #4A4A4A;
+  line-height: 1.45;
+  margin-bottom: 0.55rem;
+}
+
+.service-area-card__list li:last-child {
+  margin-bottom: 0;
+}
+
+.service-area-card__list li i {
+  flex-shrink: 0;
+  color: #D4AF37;
+  font-size: 0.85rem;
+  margin-top: 0.15rem;
+}
+
+.service-area-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: auto;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #D4AF37;
+  text-decoration: none;
+  transition: gap 0.3s ease, color 0.3s ease;
+}
+
+.service-area-card__link i {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.service-area-card__link:hover {
+  color: #b8942d;
+  gap: 0.65rem;
+}
+
+.service-area-card__link:hover i {
+  transform: translateX(3px);
+}
+
+@media (max-width: 575.98px) {
+  .service-area-card {
+    padding: 2rem 1.5rem 1.75rem;
+  }
+
+  .service-area-card__keys-heading,
+  .service-area-card__list {
+    max-width: 100%;
+  }
 }
 
 /* === Floating WhatsApp Button === */
