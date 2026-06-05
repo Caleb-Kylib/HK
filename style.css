@@ -4724,6 +4724,185 @@ html {
   }
 }
 
+/* === How We Handle Your Case (Services Page) === */
+.case-process {
+  position: relative;
+  background-color: #f8f9fb;
+  background-image:
+    linear-gradient(rgba(11, 35, 69, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 35, 69, 0.025) 1px, transparent 1px);
+  background-size: 32px 32px;
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+.case-process__header {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+}
+
+.case-process__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: #0B2345;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.case-process__accent {
+  color: #D4AF37;
+}
+
+.case-process__subtitle {
+  font-size: 1.05rem;
+  color: #4A4A4A;
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+.case-process__steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  z-index: 1;
+}
+
+.case-process__step {
+  text-align: center;
+  position: relative;
+}
+
+.case-process__icon-wrap {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+
+.case-process__steps::before {
+  content: "";
+  position: absolute;
+  top: 72px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0.15),
+    rgba(11, 35, 69, 0.12) 50%,
+    rgba(212, 175, 55, 0.15)
+  );
+  z-index: 0;
+}
+
+.case-process__number {
+  position: absolute;
+  top: 58px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0B2345;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border: 3px solid #f8f9fb;
+  box-shadow: 0 4px 12px rgba(11, 35, 69, 0.15);
+}
+
+.case-process__icon {
+  position: relative;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #D4AF37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.28);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.case-process__icon i {
+  font-size: 2rem;
+  color: #0B2345;
+}
+
+.case-process__step:hover .case-process__icon {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(212, 175, 55, 0.38);
+}
+
+.case-process__step-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0B2345;
+  margin-bottom: 0.85rem;
+  line-height: 1.35;
+}
+
+.case-process__step-desc {
+  font-size: 0.925rem;
+  color: #4A4A4A;
+  line-height: 1.65;
+  margin-bottom: 0;
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 991.98px) {
+  .case-process {
+    padding: 4rem 0;
+  }
+
+  .case-process__header {
+    margin-bottom: 3rem;
+  }
+
+  .case-process__steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 1.5rem;
+  }
+
+  .case-process__steps::before {
+    display: none;
+  }
+
+  .case-process__number {
+    position: static;
+    transform: none;
+    margin-bottom: 1rem;
+    border-color: #ffffff;
+  }
+
+  .case-process__icon-wrap {
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .case-process__steps {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .case-process__step-desc {
+    max-width: 100%;
+  }
+}
+
 /* === Floating WhatsApp Button === */
 .whatsapp-float {
   position: fixed;
