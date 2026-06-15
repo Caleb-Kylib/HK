@@ -10,53 +10,23 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .service-header {
-            background: linear-gradient(rgba(30, 60, 114, 0.85), rgba(42, 82, 152, 0.85)), url('https://images.unsplash.com/photo-1544717297-fa151807cc9c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            padding: 100px 0;
-            color: white;
-            text-align: center;
-            margin-top: 70px;
-        }
-
-        .law-section {
-            padding: 80px 0;
-        }
-
-        .law-card {
-            background: #fff;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            border-left: 5px solid #1e3c72;
-            height: 100%;
-        }
-
-        .focus-area-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .focus-area-list li {
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .focus-area-list li:last-child {
-            border-bottom: none;
-        }
-
-        .focus-area-list li i {
-            color: #2a5298;
-            font-size: 1.2rem;
-        }
     </style>
 </head>
 
 <body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-container">
+            <div class="topbar-info">
+                <span><i class="fas fa-phone"></i> <a href="tel:0718307092">0718307092</a></span>
+                <span><i class="fas fa-envelope"></i> <a
+                        href="mailto:info@hakiline.co.ke">info@hakiline.co.ke</a></span>
+            </div>
+            <div class="topbar-info d-none d-md-flex">
+                <span><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</span>
+            </div>
+        </div>
+    </div>
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
@@ -84,9 +54,19 @@
         </div>
     </nav>
 
-    <header class="service-header">
+    <header class="service-detail-banner service-detail-banner--criminal">
         <div class="container">
-            <h1 class="display-4 fw-bold mb-3">Criminal Defense</h1>
+            <nav class="service-detail-breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span aria-hidden="true">/</span>
+                <a href="services.html">Services</a>
+                <span aria-hidden="true">/</span>
+                <span>Criminal Defense</span>
+            </nav>
+            <div class="service-detail-banner__icon" aria-hidden="true">
+                <i class="fas fa-gavel"></i>
+            </div>
+            <h1>Criminal Defense</h1>
             <p class="lead">Upholding the presumption of innocence and protecting your constitutional rights.</p>
         </div>
     </header>
@@ -146,6 +126,19 @@
         </div>
     </section>
 
+    <section class="service-explore-cta">
+        <div class="container">
+            <div class="service-explore-cta__inner">
+                <span class="service-explore-cta__eyebrow">Explore More</span>
+                <h2>Discover Our Full Range of Legal Services</h2>
+                <p>From criminal defense to corporate law — browse all practice areas to find the right expertise.</p>
+                <a href="services.html" class="service-explore-cta__btn">
+                    View All Services <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer-section">
         <div class="footer-container">
             <div class="footer-about">
@@ -169,7 +162,7 @@
             </div>
             <div class="footer-contact">
                 <h4>Contact Info</h4>
-                <p><i class="fas fa-phone"></i> +254 700 000 000</p>
+                <p><i class="fas fa-phone"></i> 0718307092</p>
                 <p><i class="fas fa-envelope"></i> info@hakiline.co.ke</p>
                 <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
             </div>
@@ -183,7 +176,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 HakiLine Advocates. All Rights Reserved.</p>
+            <p>&copy; 2026 HakiLine Advocates. All Rights Reserved.</p>
         </div>
     </footer>
 </body>

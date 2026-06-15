@@ -16,12 +16,40 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
+    const topbar = document.querySelector('.topbar');
+    if (window.scrollY > 40) {
         navbar.classList.add('scrolled');
+        if (topbar) topbar.style.transform = 'translateY(-100%)';
     } else {
         navbar.classList.remove('scrolled');
+        if (topbar) topbar.style.transform = 'translateY(0)';
     }
 });
+
+// Active Link Indicator Logic
+function setActiveNavLink() {
+    const currentPath = window.location.pathname;
+    const page = currentPath.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        if (href === page) {
+            link.classList.add('active');
+        } else if (page.includes('blog') && href === 'blog.html') {
+            link.classList.add('active');
+        } else if (page.includes('law') && href === 'services.html') {
+            link.classList.add('active');
+        } else if (page.includes('defense') && href === 'services.html') {
+            link.classList.add('active');
+        } else if (page.includes('protection') && href === 'services.html') {
+            link.classList.add('active');
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', setActiveNavLink);
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

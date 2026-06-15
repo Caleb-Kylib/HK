@@ -118,20 +118,68 @@ p {
 }
 
 /* Navigation */
-.navbar {
+.topbar {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  padding: 0;
+  height: 40px;
+  line-height: 40px;
+  font-size: 0.9rem;
+  z-index: 1001;
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.topbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.topbar-info {
+  display: flex;
+  gap: 20px;
+}
+
+.topbar-info span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar-info a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.topbar-info a:hover {
+  opacity: 0.8;
+}
+
+.navbar {
+  position: fixed;
+  top: 40px;
+  /* Space for topbar */
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   z-index: 1000;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.85);
+  top: 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -195,17 +243,24 @@ p {
 
 /* Google Reviews Styling */
 .testimonial-card-google {
-  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
-  border-radius: 36px;
-  padding: 32px;
-  box-shadow: 0 24px 56px rgba(20, 35, 70, 0.1);
-  border: 1px solid rgba(115, 125, 145, 0.14);
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   text-align: left;
   height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card-google:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .google-review-header {
@@ -327,11 +382,13 @@ p {
 .nav-link.active::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: -8px;
   left: 0;
   width: 100%;
-  height: 2px;
-  background: #667eea;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
 .hamburger {
@@ -3589,20 +3646,16 @@ p {
   position: absolute;
   inset: 0;
   background-image:
-    repeating-linear-gradient(
-      90deg,
+    repeating-linear-gradient(90deg,
       rgba(11, 35, 69, 0.015) 0px,
       rgba(11, 35, 69, 0.015) 1px,
       transparent 1px,
-      transparent 48px
-    ),
-    repeating-linear-gradient(
-      0deg,
+      transparent 48px),
+    repeating-linear-gradient(0deg,
       rgba(11, 35, 69, 0.015) 0px,
       rgba(11, 35, 69, 0.015) 1px,
       transparent 1px,
-      transparent 48px
-    );
+      transparent 48px);
   opacity: 0.45;
   pointer-events: none;
 }
@@ -3664,14 +3717,12 @@ p {
   right: 0;
   width: 1px;
   height: 64%;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(212, 175, 55, 0.45) 20%,
-    rgba(11, 35, 69, 0.12) 50%,
-    rgba(212, 175, 55, 0.45) 80%,
-    transparent
-  );
+  background: linear-gradient(to bottom,
+      transparent,
+      rgba(212, 175, 55, 0.45) 20%,
+      rgba(11, 35, 69, 0.12) 50%,
+      rgba(212, 175, 55, 0.45) 80%,
+      transparent);
 }
 
 .achievements-premium__icon {
@@ -5067,12 +5118,10 @@ html {
   left: 12.5%;
   right: 12.5%;
   height: 2px;
-  background: linear-gradient(
-    90deg,
-    rgba(212, 175, 55, 0.15),
-    rgba(11, 35, 69, 0.12) 50%,
-    rgba(212, 175, 55, 0.15)
-  );
+  background: linear-gradient(90deg,
+      rgba(212, 175, 55, 0.15),
+      rgba(11, 35, 69, 0.12) 50%,
+      rgba(212, 175, 55, 0.15));
   z-index: 0;
 }
 
@@ -5247,11 +5296,24 @@ html {
 =========================================== */
 .service-detail-banner {
   position: relative;
-  padding: 140px 20px 100px;
+  padding: 160px 20px 120px;
   color: #ffffff;
   text-align: center;
-  background: linear-gradient(rgba(11, 35, 69, 0.82), rgba(11, 35, 69, 0.82)) center/cover no-repeat;
-  margin-top: 70px;
+  background: linear-gradient(rgba(11, 35, 69, 0.7), rgba(11, 35, 69, 0.7)), center/cover no-repeat;
+  margin-top: 0;
+  /* Updated to 0 because of fixed topbar/navbar layout */
+  overflow: hidden;
+}
+
+.service-detail-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, transparent 0%, rgba(11, 35, 69, 0.4) 100%);
+  z-index: 0;
 }
 
 .service-detail-banner::after {
@@ -5322,15 +5384,57 @@ html {
   line-height: 1.65;
 }
 
-.service-detail-banner--litigation { background-image: linear-gradient(rgba(11, 35, 69, 0.82), rgba(11, 35, 69, 0.82)), url('assets/img/court.jpg'); }
-.service-detail-banner--corporate { background-image: linear-gradient(rgba(11, 35, 69, 0.82), rgba(11, 35, 69, 0.82)), url('assets/img/firm2.jpg'); }
-.service-detail-banner--family { background-image: linear-gradient(rgba(11, 35, 69, 0.82), rgba(11, 35, 69, 0.82)), url('assets/img/advocates3.jpg'); }
-.service-detail-banner--realestate { background-image: linear-gradient(rgba(11, 35, 69, 0.82), rgba(11, 35, 69, 0.82)), url('assets/img/lawyers6.jpg'); }
-.service-detail-banner--employment { background-image: linear-gradient(rgba(11, 35, 69, 0.82), rgba(11, 35, 69, 0.82)), url('assets/img/advocates1.jpg'); }
-.service-detail-banner--ip { background-image: linear-gradient(rgba(11, 35, 69, 0.82), rgba(11, 35, 69, 0.82)), url('assets/img/lawyers5.jpg'); }
-.service-detail-banner--humanrights { background-image: linear-gradient(rgba(11, 35, 69, 0.82), rgba(11, 35, 69, 0.82)), url('assets/img/advocate6.jpg'); }
-.service-detail-banner--immigration { background-image: linear-gradient(rgba(11, 35, 69, 0.82), rgba(11, 35, 69, 0.82)), url('assets/img/advocate4.jpg'); }
-.service-detail-banner--tax { background-image: linear-gradient(rgba(11, 35, 69, 0.82), rgba(11, 35, 69, 0.82)), url('assets/img/advocate7.jpg'); }
+.service-detail-banner--litigation {
+  background-image: linear-gradient(rgba(11, 35, 69, 0.7), rgba(11, 35, 69, 0.7)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80');
+}
+
+.service-detail-banner--corporate {
+  background-image: linear-gradient(rgba(11, 35, 69, 0.7), rgba(11, 35, 69, 0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80');
+}
+
+.service-detail-banner--family {
+  background-image: linear-gradient(rgba(11, 35, 69, 0.7), rgba(11, 35, 69, 0.7)), url('https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=80');
+}
+
+.service-detail-banner--realestate {
+  background-image: linear-gradient(rgba(11, 35, 69, 0.7), rgba(11, 35, 69, 0.7)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80');
+}
+
+.service-detail-banner--employment {
+  background-image: linear-gradient(rgba(11, 35, 69, 0.7), rgba(11, 35, 69, 0.7)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80');
+}
+
+.service-detail-banner--ip {
+  background-image: linear-gradient(rgba(11, 35, 69, 0.7), rgba(11, 35, 69, 0.7)), url('https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=1200&q=80');
+}
+
+.service-detail-banner--humanrights {
+  background-image: linear-gradient(rgba(11, 35, 69, 0.7), rgba(11, 35, 69, 0.7)), url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1200&q=80');
+}
+
+.service-detail-banner--immigration {
+  background-image: linear-gradient(rgba(11, 35, 69, 0.7), rgba(11, 35, 69, 0.7)), url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80');
+}
+
+.service-detail-banner--tax {
+  background-image: linear-gradient(rgba(11, 35, 69, 0.7), rgba(11, 35, 69, 0.7)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80');
+}
+
+.service-detail-banner--criminal {
+  background-image: linear-gradient(rgba(11, 35, 69, 0.7), rgba(11, 35, 69, 0.7)), url('https://images.unsplash.com/photo-1453723490680-8b066dca098a?auto=format&fit=crop&w=1200&q=80');
+}
+
+.service-detail-banner--cyber {
+  background-image: linear-gradient(rgba(11, 35, 69, 0.7), rgba(11, 35, 69, 0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80');
+}
+
+.service-detail-banner--divorce {
+  background-image: linear-gradient(rgba(11, 35, 69, 0.7), rgba(11, 35, 69, 0.7)), url('https://images.unsplash.com/photo-1582533081023-930fc497936d?auto=format&fit=crop&w=1200&q=80');
+}
+
+.service-detail-banner--personal-injury {
+  background-image: linear-gradient(rgba(11, 35, 69, 0.7), rgba(11, 35, 69, 0.7)), url('https://images.unsplash.com/photo-1584441405886-bc91b61ea313?auto=format&fit=crop&w=1200&q=80');
+}
 
 .service-detail-content {
   background: #ffffff;
