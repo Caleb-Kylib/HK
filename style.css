@@ -118,55 +118,9 @@ p {
 }
 
 /* Navigation */
-.topbar {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  color: white;
-  padding: 0;
-  height: 40px;
-  line-height: 40px;
-  font-size: 0.9rem;
-  z-index: 1001;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  transition: transform 0.3s ease;
-}
-
-.topbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-.topbar-info {
-  display: flex;
-  gap: 20px;
-}
-
-.topbar-info span {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.topbar-info a {
-  color: white;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-
-.topbar-info a:hover {
-  opacity: 0.8;
-}
-
 .navbar {
-  position: fixed;
-  top: 40px;
-  /* Space for topbar */
+  position: sticky;
+  top: 0;
   width: 100%;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(15px);
@@ -177,9 +131,9 @@ p {
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.85);
-  top: 0;
+  background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 5px 0;
 }
 
 .nav-container {
@@ -437,7 +391,7 @@ p {
 .hero {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    url('Assets/img/contact.jpg') no-repeat center center/cover;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1483,7 +1437,7 @@ p {
   .team-banner {
     /* Two-layer background: gradient overlay + photo */
     background-image: linear-gradient(135deg, rgba(102, 166, 255, 0.8), rgba(167, 139, 250, 0.8)),
-      url('Assets/img/team.jpg');
+      url('Assets/img/teammeet.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

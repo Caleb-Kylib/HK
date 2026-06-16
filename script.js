@@ -16,13 +16,10 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    const topbar = document.querySelector('.topbar');
-    if (window.scrollY > 40) {
+    if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
-        if (topbar) topbar.style.transform = 'translateY(-100%)';
     } else {
         navbar.classList.remove('scrolled');
-        if (topbar) topbar.style.transform = 'translateY(0)';
     }
 });
 
