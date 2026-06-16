@@ -15,13 +15,36 @@
 
   <!-- Your Custom CSS (should come AFTER Bootstrap) -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="premium.css">
   <link rel="stylesheet" href="chatbot.css">
 
 </head>
 
 
 <!-- Navigation -->
-<nav class="navbar">
+<!-- Top Bar -->
+<div class="premium-topbar">
+  <div class="topbar-container">
+    <div class="topbar-left">
+      <span class="topbar-item"><i class="fas fa-map-marker-alt"></i> Ongata Rongai, Kajiado County</span>
+      <span class="topbar-separator">|</span>
+      <span class="topbar-item"><i class="fas fa-clock"></i> Mon - Fri: 8am - 5pm</span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-item"><i class="fas fa-phone"></i> <a href="tel:0718307092">0718307092</a></span>
+      <span class="topbar-separator">|</span>
+      <span class="topbar-item"><i class="fas fa-envelope"></i> <a
+          href="mailto:info@hakiline.co.ke">info@hakiline.co.ke</a></span>
+      <span class="topbar-socials">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar premium-navbar">
   <div class="nav-container">
     <a href="index.html" class="nav-logo">
       <div class="logo-icon">
@@ -33,16 +56,33 @@
       </div>
     </a>
     <ul class="nav-menu">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="about.html" class="nav-link">The Firm</a></li>
-      <li><a href="services.html" class="nav-link">Services</a></li>
-      <li><a href="team.html" class="nav-link">Team</a></li>
-      <li><a href="blog.html" class="nav-link active">Blog</a></li>
-      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">The Firm</a>
+      </li>
+      <li class="nav-item">
+        <a href="services.html" class="nav-link">Practice Areas</a>
+      </li>
+      <li class="nav-item">
+        <a href="team.html" class="nav-link">Our Team</a>
+      </li>
+      <li class="nav-item">
+        <a href="blog.html" class="nav-link active">Insights</a>
+      </li>
+      <li class="nav-item">
+        <a href="contact.html" class="nav-link">Contact</a>
+      </li>
     </ul>
-    <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
   </div>
 </nav>
+
 
 <!-- Blog Banner -->
 <section class="blog-banner text-white text-center py-6">
@@ -423,6 +463,7 @@
   <i class="fab fa-whatsapp"></i>
 </a>
 <script src="chatbot.js"></script>
+<script src="premium.js"></script>
 </body>
 
 </html>

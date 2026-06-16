@@ -387,37 +387,53 @@
     </div>
   </section>
 
-  <!-- TRUST METRICS SECTION -->
-  <section class="premium-trust-section py-5">
-    <div class="container">
-      <div class="row g-4 text-center justify-content-center">
-        <div class="col-6 col-md-3">
-          <div class="trust-metric-card">
-            <div class="trust-icon"><i class="fas fa-certificate"></i></div>
-            <h6 class="fw-bold mb-0">Licensed & Certified Advocates</h6>
-          </div>
+  <!-- OUR ACHIEVEMENTS / AWARDS SECTION -->
+<section class="achievements-premium" id="achievements">
+  <div class="container">
+    <div class="achievements-premium__header text-center">
+      <span class="achievements-premium__eyebrow">Proven Excellence</span>
+      <h2 class="achievements-premium__title">Our Achievements</h2>
+      <p class="achievements-premium__subtitle">
+        A legacy of excellence, trust, and justice delivered.
+      </p>
+    </div>
+
+    <div class="achievements-premium__grid">
+      <div class="achievements-premium__stat">
+        <div class="achievements-premium__icon" aria-hidden="true">
+          <i class="fas fa-scale-balanced"></i>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="trust-metric-card">
-            <div class="trust-icon"><i class="fas fa-users"></i></div>
-            <h6 class="fw-bold mb-0">Client-Focused Approach</h6>
-          </div>
+        <div class="achievements-premium__number counter" data-target="5">0</div>
+        <p class="achievements-premium__label">Years of Experience</p>
+      </div>
+
+      <div class="achievements-premium__stat">
+        <div class="achievements-premium__icon" aria-hidden="true">
+          <i class="fas fa-folder-open"></i>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="trust-metric-card">
-            <div class="trust-icon"><i class="fas fa-balance-scale"></i></div>
-            <h6 class="fw-bold mb-0">Transparent Legal Guidance</h6>
-          </div>
+        <div class="achievements-premium__number counter" data-target="30">0</div>
+        <p class="achievements-premium__label">Successful Cases</p>
+      </div>
+
+      <div class="achievements-premium__stat">
+        <div class="achievements-premium__icon" aria-hidden="true">
+          <i class="fas fa-trophy"></i>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="trust-metric-card">
-            <div class="trust-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <h6 class="fw-bold mb-0">Serving Ongata Rongai & Kenya</h6>
-          </div>
+        <div class="achievements-premium__number counter" data-target="5">0</div>
+        <p class="achievements-premium__label">Legal Awards</p>
+      </div>
+
+      <div class="achievements-premium__stat">
+        <div class="achievements-premium__icon" aria-hidden="true">
+          <i class="fas fa-handshake"></i>
         </div>
+        <div class="achievements-premium__number counter" data-target="50">0</div>
+        <p class="achievements-premium__label">Clients Served</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+        
 
 
   <!--testimonials-->
@@ -559,10 +575,7 @@
             <i class="fas fa-calendar-check me-2"></i>
             Book Free Consultation
           </a>
-          <p class="cta-subtext mt-3 mb-0">
-            <i class="fas fa-phone-alt me-2"></i>
-            Or call: <a href="tel:0718307092" class="text-warning fw-bold">0718307092</a>
-          </p>
+          
         </div>
       </div>
     </div>
@@ -670,7 +683,41 @@
   </div>
 </footer>
 
+<!-- COUNT ANIMATION SCRIPT -->
+<script>
+  const counters = document.querySelectorAll('.counter');
+  const speed = 200; // lower = faster
 
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target.toLocaleString();
+        }
+      };
+      updateCount();
+    });
+  };
+
+  // Trigger animation when section enters viewport
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters();
+        observer.disconnect(); // run once
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(document.querySelector('#achievements'));
+</script>
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

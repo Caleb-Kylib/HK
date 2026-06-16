@@ -10,6 +10,7 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="premium.css">
     <style>
         .service-header {
             background: linear-gradient(rgba(30, 60, 114, 0.85), rgba(42, 82, 152, 0.85)), url('https://images.unsplash.com/photo-1544717297-fa151807cc9c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
@@ -54,36 +55,73 @@
             font-size: 1.2rem;
         }
     </style>
+
+
+<!-- Navigation -->
+<!-- Top Bar -->
+<div class="premium-topbar">
+  <div class="topbar-container">
+    <div class="topbar-left">
+      <span class="topbar-item"><i class="fas fa-map-marker-alt"></i> Ongata Rongai, Kajiado County</span>
+      <span class="topbar-separator">|</span>
+      <span class="topbar-item"><i class="fas fa-clock"></i> Mon - Fri: 8am - 5pm</span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-item"><i class="fas fa-phone"></i> <a href="tel:0718307092">0718307092</a></span>
+      <span class="topbar-separator">|</span>
+      <span class="topbar-item"><i class="fas fa-envelope"></i> <a
+          href="mailto:info@hakiline.co.ke">info@hakiline.co.ke</a></span>
+      <span class="topbar-socials">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar premium-navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">
+        <i class="fa-solid fa-scale-balanced"></i>
+      </div>
+      <div class="logo-text">
+        <span class="brand-haki">HakiLine</span>
+        <span class="brand-advocates">Advocates</span>
+      </div>
+    </a>
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">The Firm</a>
+      </li>
+      <li class="nav-item">
+        <a href="services.html" class="nav-link active">Practice Areas</a>
+      </li>
+      <li class="nav-item">
+        <a href="team.html" class="nav-link">Our Team</a>
+      </li>
+      <li class="nav-item">
+        <a href="blog.html" class="nav-link">Insights</a>
+      </li>
+      <li class="nav-item">
+        <a href="contact.html" class="nav-link">Contact</a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+</nav>
+
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <div class="logo-icon">
-                    <i class="fa-solid fa-scale-balanced"></i>
-                </div>
-                <div class="logo-text">
-                    <span class="brand-haki">HakiLine</span>
-                    <span class="brand-advocates">Advocates</span>
-                </div>
-            </a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">The Firm</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
-                <li class="nav-item"><a href="team.html" class="nav-link">Our Team</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-
     <header class="service-header">
         <div class="container">
             <h1 class="display-4 fw-bold mb-3">Estate Planning & Succession</h1>
@@ -185,6 +223,10 @@
             <p>&copy; 2024 HakiLine Advocates. All Rights Reserved.</p>
         </div>
     </footer>
+
+<script src="script.js"></script>
+<script src="chatbot.js"></script>
+<script src="premium.js"></script>
 </body>
 
 </html>

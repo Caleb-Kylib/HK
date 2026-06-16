@@ -12,13 +12,36 @@
     rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="premium.css">
   <link rel="stylesheet" href="chatbot.css">
 
 </head>
 
 
-<!-- Navbar -->
-<nav class="navbar">
+<!-- Navigation -->
+<!-- Top Bar -->
+<div class="premium-topbar">
+  <div class="topbar-container">
+    <div class="topbar-left">
+      <span class="topbar-item"><i class="fas fa-map-marker-alt"></i> Ongata Rongai, Kajiado County</span>
+      <span class="topbar-separator">|</span>
+      <span class="topbar-item"><i class="fas fa-clock"></i> Mon - Fri: 8am - 5pm</span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-item"><i class="fas fa-phone"></i> <a href="tel:0718307092">0718307092</a></span>
+      <span class="topbar-separator">|</span>
+      <span class="topbar-item"><i class="fas fa-envelope"></i> <a
+          href="mailto:info@hakiline.co.ke">info@hakiline.co.ke</a></span>
+      <span class="topbar-socials">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar premium-navbar">
   <div class="nav-container">
     <a href="index.html" class="nav-logo">
       <div class="logo-icon">
@@ -30,12 +53,24 @@
       </div>
     </a>
     <ul class="nav-menu">
-      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-      <li class="nav-item"><a href="about.html" class="nav-link">The Firm</a></li>
-      <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
-      <li class="nav-item"><a href="team.html" class="nav-link">Our Team</a></li>
-      <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-      <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">The Firm</a>
+      </li>
+      <li class="nav-item">
+        <a href="services.html" class="nav-link active">Practice Areas</a>
+      </li>
+      <li class="nav-item">
+        <a href="team.html" class="nav-link">Our Team</a>
+      </li>
+      <li class="nav-item">
+        <a href="blog.html" class="nav-link">Insights</a>
+      </li>
+      <li class="nav-item">
+        <a href="contact.html" class="nav-link">Contact</a>
+      </li>
     </ul>
     <div class="hamburger">
       <span class="bar"></span>
@@ -338,14 +373,27 @@
 </section>
 
 <!-- CTA -->
-<section class="services-cta text-center py-5 text-white"
-  style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
-  <div class="container py-4">
-    <h3 class="fw-bold mb-3">Need Expert Legal Guidance?</h3>
-    <p class="mb-4 opacity-75">Contact us today to schedule a consultation with one of our experienced advocates.</p>
-    <a href="contact.html" class="btn btn-light btn-lg px-5">Book a Consultation</a>
-  </div>
-</section>
+<section class="cta-section-enhanced py-5 fade-in-section" id="cta">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 text-center text-lg-start mb-4 mb-lg-0">
+          <span class="cta-label text-warning fw-semibold text-uppercase mb-2 d-block">Take Action Today</span>
+          <h2 class="cta-title fw-bold mb-3">Get Expert Legal Guidance Today</h2>
+          <p class="cta-description mb-0">
+            Don't navigate complex legal matters alone. Our experienced attorneys are ready to provide
+            the strategic counsel and dedicated representation you deserve. Schedule your consultation now.
+          </p>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+          <a href="contact.html" class="btn btn-cta-primary btn-lg px-5 py-3 shadow-lg">
+            <i class="fas fa-calendar-check me-2"></i>
+            Book Free Consultation
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </section>
 
 <!-- Footer -->
 <footer class="footer-section">
@@ -391,6 +439,7 @@
 
 <script src="script.js"></script>
 <script src="chatbot.js"></script>
+<script src="premium.js"></script>
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/254747723727" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
   <i class="fab fa-whatsapp"></i>
