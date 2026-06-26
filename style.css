@@ -2108,7 +2108,7 @@ p {
   position: relative;
   background: linear-gradient(rgba(11, 35, 69, 0.78),
       rgba(11, 35, 69, 0.78)),
-    url('assets/img/firm2.jpg') center/cover no-repeat;
+    url('./Assets/img/firm2.jpg') center/cover no-repeat;
   color: #fff;
   padding: 160px 20px;
   display: flex;
@@ -2370,7 +2370,7 @@ p {
   padding: 90px 20px;
   background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url('assets/img/court.jpg') no-repeat center center/cover;
+    url('./Assets/img/court.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2425,7 +2425,7 @@ p {
   padding: 90px 20px;
   background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url('assets/img/contactus.jpg') no-repeat center center/cover;
+    url('./Assets/img/contactus.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
