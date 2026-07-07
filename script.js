@@ -141,7 +141,8 @@ function showNotification(message, type = 'info') {
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         z-index: 10000;
-        max-width: 400px;
+        max-width: min(400px, calc(100vw - 24px));
+        width: auto;
         animation: slideInRight 0.3s ease-out;
     `;
 

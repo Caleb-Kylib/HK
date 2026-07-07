@@ -291,10 +291,19 @@
 @media (max-width: 768px) {
     .premium-hero {
         padding: 120px 0 80px;
+        background-attachment: scroll;
+    }
+
+    .premium-hero .hero-content {
+        padding: 0 18px;
     }
 
     .premium-hero .hero-title {
-        font-size: 2.2rem;
+        font-size: clamp(2rem, 5.5vw, 2.8rem);
+    }
+
+    .premium-hero .hero-subtitle {
+        font-size: 1.05rem;
     }
 
     .hero-buttons {
@@ -306,6 +315,20 @@
 
     .hero-buttons a {
         width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .premium-hero {
+        padding: 100px 0 70px;
+    }
+
+    .premium-hero .hero-title {
+        font-size: 1.9rem;
+    }
+
+    .premium-hero .hero-subtitle {
+        font-size: 0.98rem;
     }
 }
 

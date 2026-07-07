@@ -119,6 +119,26 @@
     opacity: 1;
 }
 
+@media (max-width: 576px) {
+    .chatbot-toggle {
+        width: 54px;
+        height: 54px;
+        bottom: 80px;
+        right: 16px;
+    }
+
+    .chatbot-window {
+        right: 12px;
+        left: 12px;
+        width: auto;
+        max-width: none;
+        bottom: 90px;
+        height: min(72vh, 520px);
+        max-height: calc(100vh - 120px);
+        border-radius: 14px;
+    }
+}
+
 /* Messages Area */
 .chat-messages {
     flex: 1;
