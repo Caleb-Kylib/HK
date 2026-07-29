@@ -55,6 +55,9 @@
     display: flex;
     gap: 10px;
     margin-left: 6px;
+}
+
+.topbar-socials a {
     color: white;
     background: rgba(255, 255, 255, 0.1);
     width: 26px;
