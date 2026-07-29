@@ -2,16 +2,20 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', String(!isExpanded));
+        navMenu.classList.toggle('active');
+    });
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-}));
+    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        navMenu.classList.remove('active');
+    }));
+}
 
 // Navbar scroll effect
 window.addEventListener('scroll', () => {

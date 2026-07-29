@@ -65,7 +65,7 @@
         <span class="brand-advocates">Advocates</span>
       </div>
     </a>
-    <ul class="nav-menu">
+    <ul class="nav-menu" id="primary-navigation" aria-label="Primary">
       <li class="nav-item">
         <a href="index.html" class="nav-link active">Home</a>
       </li>
@@ -85,7 +85,7 @@
         <a href="contact.html" class="nav-link">Contact</a>
       </li>
     </ul>
-    <div class="hamburger">
+    <div class="hamburger" role="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
@@ -102,8 +102,8 @@
     </h1>
     <p class="hero-subtitle">Strategic legal counsel and dedicated advocacy in litigation, conveyancing, family law, and corporate matters across Kenya.</p>
     <div class="hero-buttons">
-      <a href="services.html" class="btn btn-primary-gradient">Explore Practice Areas</a>
-      <a href="contact.html" class="btn btn-outline-light-hover">Book a Consultation</a>
+      <a href="contact.html" class="btn btn-primary-gradient">Book a Consultation</a>
+      <a href="services.html" class="btn btn-outline-light-hover">Explore Practice Areas</a>
     </div>
 
   </div>
@@ -191,6 +191,8 @@
           <div class="about-image-wrapper position-relative">
             <img src='./Assets/img/pexels-ekaterina-bolovtsova-6077326.jpg'
               alt="Professional legal consultation at HakiLine Advocates"
+              loading="lazy"
+              decoding="async"
               class="img-fluid rounded-4 shadow-lg about-main-image" />
             <!-- Decorative element for visual interest -->
             <div class="about-image-decoration"></div>
