@@ -3,6 +3,12 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
 if (hamburger && navMenu) {
+    const closeMenu = () => {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        navMenu.classList.remove('active');
+    };
+
     hamburger.addEventListener('click', () => {
         const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
         hamburger.classList.toggle('active');
@@ -11,10 +17,25 @@ if (hamburger && navMenu) {
     });
 
     document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-        navMenu.classList.remove('active');
+        closeMenu();
     }));
+
+    document.addEventListener('click', event => {
+        if (!navMenu.contains(event.target) && !hamburger.contains(event.target)) {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+            closeMenu();
+            hamburger.focus();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) closeMenu();
+    });
 }
 
 // Navbar scroll effect
@@ -553,7 +574,7 @@ if (lightbox) {
 
 // Keyboard navigation for lightbox
 document.addEventListener('keydown', (e) => {
-    if (lightbox.style.display === 'block') {
+    if (lightbox && lightbox.style.display === 'block') {
         switch (e.key) {
             case 'Escape':
                 closeLightbox();
@@ -589,20 +610,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const globalSlides = document.querySelectorAll("#globalTestimonialSlider .testimonial-item");
 let globalIndex = 0;
+const nextGlobal = document.getElementById("nextGlobal");
+const prevGlobal = document.getElementById("prevGlobal");
 
-document.getElementById("nextGlobal").addEventListener("click", () => {
-    globalSlides[globalIndex].classList.remove("active");
-    globalIndex = (globalIndex + 1) % globalSlides.length;
-    globalSlides[globalIndex].classList.add("active");
-});
+if (globalSlides.length && nextGlobal && prevGlobal) {
+    nextGlobal.addEventListener("click", () => {
+        globalSlides[globalIndex].classList.remove("active");
+        globalIndex = (globalIndex + 1) % globalSlides.length;
+        globalSlides[globalIndex].classList.add("active");
+    });
 
-document.getElementById("prevGlobal").addEventListener("click", () => {
-    globalSlides[globalIndex].classList.remove("active");
-    globalIndex = (globalIndex - 1 + globalSlides.length) % globalSlides.length;
-    globalSlides[globalIndex].classList.add("active");
-});
+    prevGlobal.addEventListener("click", () => {
+        globalSlides[globalIndex].classList.remove("active");
+        globalIndex = (globalIndex - 1 + globalSlides.length) % globalSlides.length;
+        globalSlides[globalIndex].classList.add("active");
+    });
 
-// Optional auto-slide
-setInterval(() => {
-    document.getElementById("nextGlobal").click();
-}, 6000);
+    setInterval(() => nextGlobal.click(), 6000);
+}
